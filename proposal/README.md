@@ -57,6 +57,10 @@
 >#### Combat -> 
 	- Special kinds of Enemies in Different Area
 	- Mutiple kinds weak enemies, One BOSS to Complete Quest (Get into next Environment)
+
+>#### Combat -> 
+	- Puzzle, like to get the key to open a door ...
+	 
 >#### Get Money and Unlock New Ability -> 
 	- Buy heal pack
 	- Lean new Ability
