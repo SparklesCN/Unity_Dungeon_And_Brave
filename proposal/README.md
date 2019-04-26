@@ -1,3 +1,18 @@
+# Brif Descprition:
+	 You, A Witch, Wake Up In A Dungeon.
+	 You, A Witch, Lost All Your Magic Abilities.
+	 You, A Witch, Have To Leave The Dungeon.
+	 You, A Witch, Need Back To Save Your Village From Devils Attack.
+
+	 So ...
+
+	 Find A Way, 
+	 Clear The Way,
+	 Take Ablities Back,
+	 Get Our The Dungeon.
+
+	 
+
 # Arts:
 ## Player:
 	- Normal Attack
