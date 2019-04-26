@@ -1,3 +1,5 @@
+# RPG, DUNGEON
+
 # Brif Descprition:
 	 You, A Witch, Wake Up In A Dungeon.
 	 You, A Witch, Lost All Your Magic Abilities.
@@ -28,14 +30,14 @@
 > ![Env6](https://github.com/SparklesCN/Unity_Dungeon_And_Brave/blob/master/proposal/images/showEnv6.gif)
 > ![Env7](https://github.com/SparklesCN/Unity_Dungeon_And_Brave/blob/master/proposal/images/showEnv7.gif)
 
-## Some UI We Might have similar
-	- Quest
+## Some UI and Systems We Might have similar
+	- Quest System
 > ![Quest](https://github.com/SparklesCN/Unity_Dungeon_And_Brave/blob/master/proposal/images/quest.png)
 
-	- Heal and Magic Bar
+	- Heal and Magic Bar System
 > ![Bar](https://github.com/SparklesCN/Unity_Dungeon_And_Brave/blob/master/proposal/images/life_magic.png)
 
-	- Ablities
+	- Ablities System
 > ![Abli](https://github.com/SparklesCN/Unity_Dungeon_And_Brave/blob/master/proposal/images/ablity.png)
 
 > Player will be more powerful by unlock new Abilities and Level Up
@@ -59,3 +61,25 @@
 	- Buy heal pack
 	- Lean new Ability
 >#### Unlock New Environment -> ...
+
+
+# For the proposed proof of concept:
+
+Basic Environment:
+A Long Hall with basic environment models;
+Enemies
+Player
+
+Activities:
+Enemies
+Navigation In Particular Area
+Make and Take Damage
+Attack
+Die
+Player 
+Movement
+Use abilities
+Heal and Magic Bar
+Norm Attack
+Hurt
+Die
