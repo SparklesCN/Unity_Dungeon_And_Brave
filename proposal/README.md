@@ -65,18 +65,19 @@
 
 # For the proposed proof of concept:
 
->#### Basic Environment:
+>## Basic Environment:
 >#### A Long Hall with basic environment models;
 >#### Enemies
 >#### Player
 
->#### Activities:
->#### Enemies
+>## Activities:
+>## Enemies -> 
 >#### Navigation In Particular Area
 >#### Make and Take Damage
 >#### Attack
 >#### Die
->#### Player 
+
+>## Player ->
 >#### Movement
 >#### Use abilities
 >#### Heal and Magic Bar
