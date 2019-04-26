@@ -585,10 +585,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 55b146a0-f56a-4ecd-a514-81fb42e17b54
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Dungeon And Brave
+  organizationId: sparklefire
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
