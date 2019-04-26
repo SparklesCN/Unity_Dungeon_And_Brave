@@ -2,16 +2,16 @@
 	 You, A Witch, Wake Up In A Dungeon.
 	 You, A Witch, Lost All Your Magic Abilities.
 	 You, A Witch, Have To Leave The Dungeon.
-	 You, A Witch, Need Back To Save Your Village From Devils Attack.
+	 You, A Witch, Need Back To Save Your Village From Devil's Attack.
 
 	 So ...
 
 	 Find A Way, 
 	 Clear The Way,
 	 Take Ablities Back,
-	 Get Our The Dungeon.
+	 Get Out The Dungeon.
 
-	 
+
 
 # Arts:
 ## Player:
@@ -38,7 +38,8 @@
 	- Ablities
 > ![Abli](https://github.com/SparklesCN/Unity_Dungeon_And_Brave/blob/master/proposal/images/ablity.png)
 
-## Player will be more powerful by unlock new Abilities and Level Up
+> Player will be more powerful by unlock new Abilities and Level Up
+![Abli](https://github.com/SparklesCN/Unity_Dungeon_And_Brave/blob/master/proposal/images/levelUp.png)
 
 # Main Loop:
 
@@ -53,7 +54,7 @@
 	- ...
 >#### Combat -> 
 	- Special kinds of Enemies in Different Area
-	- Mutiple kinds weak enemies, One Boss to Complete Quest
+	- Mutiple kinds weak enemies, One BOSS to Complete Quest (Get into next Environment)
 >#### Get Money and Unlock New Ability -> 
 	- Buy heal pack
 	- Lean new Ability
