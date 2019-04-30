@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7417,6 +7417,7 @@ GameObject:
   - component: {fileID: 328877763}
   - component: {fileID: 328877762}
   - component: {fileID: 328877761}
+  - component: {fileID: 328877764}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7488,6 +7489,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+--- !u!114 &328877764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328877760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d04aa2797d4b5493e9b57c44556c5994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1203875811}
+  speed: 2
 --- !u!1001 &330977415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24777,6 +24792,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203875811}
+  - component: {fileID: 1203875812}
+  - component: {fileID: 1203875813}
+  - component: {fileID: 1203875814}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -24799,6 +24817,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1203875812
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203875810}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1203875813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203875810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8837be178854e406486399db6b668587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!95 &1203875814
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203875810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
+  m_Controller: {fileID: 9100000, guid: 11b002199ff634fc6acd783b74ad7b0b, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1205084275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31145,7 +31211,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[6]
       value: 
       objectReference: {fileID: 2100000, guid: 1178ff17889d8404d9e6d3dc435293e3, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
 --- !u!4 &1553781925 stripped
 Transform:
