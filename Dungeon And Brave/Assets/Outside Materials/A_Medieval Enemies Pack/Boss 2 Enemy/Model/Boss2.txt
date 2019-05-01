@@ -1,0 +1,14 @@
+0000-0000 Boind Pose
+0001-0018 loop Fast Walk
+0020-0080 loop Attack_Down
+0081-0124 loop Attack_Up
+0126-0185 loop Fight Idle
+0187-0246 loop Idle
+0248-0267 loop Hit Right
+0268-0287 loop Hit Left
+0288-0307 loop Hit Front
+0308-0327 loop Hit Back
+0328-0381 Death Front
+0382-0411 Death Back
+0413-0451 loop Slowly Walk
+0452-0488 Loop Walk Back

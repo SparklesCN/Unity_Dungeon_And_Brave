@@ -1,0 +1,20 @@
+0000-0284 loop Idle
+0286-0427 loop Idle01
+0429-0463 loop Sneeking
+0465-0491 loop Walking
+0493-0510 loop Runing
+0512-0562 loop Wak Back Turn 180
+0564-0592 lopp Walking 01
+0594-0622 loop Turn Left 90
+0624-0695 loop Turn Left 180
+0697-0725 loop Turn Right 90
+0727-0798 loop Turn Right 180
+0800-0829 loop Walk Back
+0831-0873 loop Retreating
+0875-0920 loop Attack Hand
+0922-0961 loop Fight Idle
+0963-1042 loop Flame Attack
+1044-1103 loop Idle Wounded
+1105-1140 loop Walk Wounded
+1142-1167 loop Hit
+1169-1209 Death

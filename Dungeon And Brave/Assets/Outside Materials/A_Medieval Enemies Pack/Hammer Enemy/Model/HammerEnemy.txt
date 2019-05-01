@@ -1,0 +1,13 @@
+0000-0023 loop walk
+0025-0037 loop Hit Right
+0038-0061 loop Attack
+0062-0083 loop Death
+0085-0114 loop Idle
+0115-0154 loop Fight Idle
+0155-0169 loop Hit Front
+0170-0184 loop Hit Back
+0185-0199 loop Hit Left
+0200-0229 loop Jump
+0231-0242 loop Run
+0244-0269 loop Long Jump
+0270-0299 loop Attack0 1

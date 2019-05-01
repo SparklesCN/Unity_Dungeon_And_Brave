@@ -1,0 +1,7 @@
+0000-0029 loop Fly
+0030-0041 loop Attack
+0042-0055 loop Hit Left
+0056-0069 loop Hit Right
+0070-0083 loop Hit Front/Down
+0084-0095 loop Attack 01
+0096-0119 Death
