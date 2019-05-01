@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &153318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 402252}
+  - 114: {fileID: 11486180}
+  - 114: {fileID: 11467316}
+  m_Layer: 0
+  m_Name: Splat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402252
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11467316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2485c950b54f23489e2af319bbf8718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAtCamera: 0
+  theCamera: {fileID: 0}
+  nameColorAtt: []
+  colorRangeAtt: []
+--- !u!114 &11486180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 325033367, guid: 785ff59215cab58499bfdd3f0a306c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FxAttributesList:
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: GlobalScale
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 4
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 30
+      MinMaxFlag: 3
+      Name: CustomColor
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 1
+      MaxValue2: 1
+      MaxValue3: 0
+    m_Value0: 1
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: Count
+      Description: 
+      DefaultValue0: 4
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 4
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 3
+      Name: Opacity
+      Description: 
+      DefaultValue0: .75
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: .75
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  m_PlayOnStart: 0
+  m_FxName: Particles/Splat.pkfx
+  m_BoundFx: {fileID: 102900000, guid: de19f387a3c05b74eaab517ac08fd8eb, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Value0
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PlayOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.Name
+      value: GlobalScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.Type
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.Name
+      value: CustomColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MaxValue1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MaxValue2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Value0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.Name
+      value: Count
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.DefaultValue0
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Value0
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.Name
+      value: Opacity
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.DefaultValue0
+      value: .75
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Value0
+      value: .75
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxName
+      value: Particles/Splat.pkfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_BoundFx
+      value: 
+      objectReference: {fileID: 102900000, guid: de19f387a3c05b74eaab517ac08fd8eb,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 153318}
+  m_IsPrefabParent: 1

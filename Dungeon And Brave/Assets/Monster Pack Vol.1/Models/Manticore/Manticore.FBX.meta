@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 887f56d6a208fea4287c3adc2da2a286
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: QiongQi_wuqi01
+    100004: QiongQi_wuqi
+    100006: Bip01 TailNub
+    100008: Bip01 Tail3
+    100010: Bip01 Tail2
+    100012: Bip01 Tail1
+    100014: Bip01 Tail
+    100016: Bip01 R Toe0Nub
+    100018: Bip01 R Toe0
+    100020: Bip01 R Foot
+    100022: Bip01 R Calf
+    100024: Bip01 R Thigh
+    100026: Bip01 L Toe0Nub
+    100028: Bip01 L Toe0
+    100030: Bip01 L Foot
+    100032: Bip01 L Calf
+    100034: Bip01 L Thigh
+    100036: Bip01 R Finger0
+    100038: Bip01 R Hand
+    100040: Bip01 R Forearm
+    100042: Bip01 L Finger0
+    100044: Bip01 L Hand
+    100046: Bip01 L Forearm
+    100048: Bone_wuqi01
+    100050: Bone_wuqi
+    100052: Bone08
+    100054: Bone07
+    100056: Bone06
+    100058: Bone05
+    100060: Bone04
+    100062: Bone03
+    100064: Bone02
+    100066: Bone01
+    100068: Bip01 HeadNub
+    100070: Bip01 Head
+    100072: Bip01 Neck2
+    100074: Bip01 Neck1
+    100076: Bip01 Neck
+    100078: Bip01 Spine1
+    100080: Bip01 Spine
+    100082: Bip01 Pelvis
+    100084: Bip01 Footsteps
+    100086: Bip01
+    100088: qiongqi_01
+    100090: Bip01 R HorseLink
+    100092: Bip01 L HorseLink
+    100094: Bip01 R Finger0Nub
+    100096: Bip01 R UpperArm
+    100098: Bip01 R Clavicle
+    100100: Bip01 L Finger0Nub
+    100102: Bip01 L UpperArm
+    100104: Bip01 L Clavicle
+    100106: Bone06(mirrored)
+    100108: Bone05(mirrored)
+    100110: Bone08(mirrored)
+    100112: Bone07(mirrored)
+    100114: Bone04(mirrored)
+    100116: Bone03(mirrored)
+    100118: Bone02(mirrored)
+    100120: Bone01(mirrored)
+    100122: wuqi_1
+    100124: wuqi_1_2
+    100126: wuqi_2
+    100128: wuqi_2_2
+    400000: //RootNode
+    400002: QiongQi_wuqi01
+    400004: QiongQi_wuqi
+    400006: Bip01 TailNub
+    400008: Bip01 Tail3
+    400010: Bip01 Tail2
+    400012: Bip01 Tail1
+    400014: Bip01 Tail
+    400016: Bip01 R Toe0Nub
+    400018: Bip01 R Toe0
+    400020: Bip01 R Foot
+    400022: Bip01 R Calf
+    400024: Bip01 R Thigh
+    400026: Bip01 L Toe0Nub
+    400028: Bip01 L Toe0
+    400030: Bip01 L Foot
+    400032: Bip01 L Calf
+    400034: Bip01 L Thigh
+    400036: Bip01 R Finger0
+    400038: Bip01 R Hand
+    400040: Bip01 R Forearm
+    400042: Bip01 L Finger0
+    400044: Bip01 L Hand
+    400046: Bip01 L Forearm
+    400048: Bone_wuqi01
+    400050: Bone_wuqi
+    400052: Bone08
+    400054: Bone07
+    400056: Bone06
+    400058: Bone05
+    400060: Bone04
+    400062: Bone03
+    400064: Bone02
+    400066: Bone01
+    400068: Bip01 HeadNub
+    400070: Bip01 Head
+    400072: Bip01 Neck2
+    400074: Bip01 Neck1
+    400076: Bip01 Neck
+    400078: Bip01 Spine1
+    400080: Bip01 Spine
+    400082: Bip01 Pelvis
+    400084: Bip01 Footsteps
+    400086: Bip01
+    400088: qiongqi_01
+    400090: Bip01 R HorseLink
+    400092: Bip01 L HorseLink
+    400094: Bip01 R Finger0Nub
+    400096: Bip01 R UpperArm
+    400098: Bip01 R Clavicle
+    400100: Bip01 L Finger0Nub
+    400102: Bip01 L UpperArm
+    400104: Bip01 L Clavicle
+    400106: Bone06(mirrored)
+    400108: Bone05(mirrored)
+    400110: Bone08(mirrored)
+    400112: Bone07(mirrored)
+    400114: Bone04(mirrored)
+    400116: Bone03(mirrored)
+    400118: Bone02(mirrored)
+    400120: Bone01(mirrored)
+    400122: wuqi_1
+    400124: wuqi_1_2
+    400126: wuqi_2
+    400128: wuqi_2_2
+    4300000: qiongqi_01
+    4300002: QiongQi_wuqi
+    4300004: QiongQi_wuqi01
+    4300006: wuqi_2
+    4300008: wuqi_1
+    4300010: wuqi_1_2
+    4300012: wuqi_2_2
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: QiongQi_wuqi01
+    13700002: QiongQi_wuqi
+    13700004: qiongqi_01
+    13700006: wuqi_1
+    13700008: wuqi_1_2
+    13700010: wuqi_2
+    13700012: wuqi_2_2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 3
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

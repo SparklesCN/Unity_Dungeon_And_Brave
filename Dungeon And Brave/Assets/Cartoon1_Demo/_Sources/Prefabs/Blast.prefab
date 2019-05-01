@@ -1,0 +1,775 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &143146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 451336}
+  - 114: {fileID: 11488672}
+  - 114: {fileID: 11481054}
+  m_Layer: 0
+  m_Name: Blast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &451336
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11481054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2485c950b54f23489e2af319bbf8718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAtCamera: 1
+  theCamera: {fileID: 0}
+  nameColorAtt:
+  - CustomColor
+  - SubColor
+  colorRangeAtt:
+  - {x: 0, y: 1}
+  - {x: 0, y: 1}
+--- !u!114 &11488672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 325033367, guid: 785ff59215cab58499bfdd3f0a306c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FxAttributesList:
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: GlobalScale
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 4
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 30
+      MinMaxFlag: 3
+      Name: CustomColor
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: .100000001
+      DefaultValue2: .100000001
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 1
+      MaxValue2: 1
+      MaxValue3: 0
+    m_Value0: 1
+    m_Value1: .100000001
+    m_Value2: .100000001
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 30
+      MinMaxFlag: 3
+      Name: SubColor
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: 1
+      DefaultValue2: .100000001
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 1
+      MaxValue2: 1
+      MaxValue3: 0
+    m_Value0: 1
+    m_Value1: 1
+    m_Value2: .100000001
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 30
+      MinMaxFlag: 3
+      Name: Direction
+      Description: 
+      DefaultValue0: -1
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: -1
+      MinValue1: -1
+      MinValue2: -1
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 1
+      MaxValue2: 1
+      MaxValue3: 0
+    m_Value0: -1
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: Speed
+      Description: 
+      DefaultValue0: 8
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 8
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: Duration
+      Description: 
+      DefaultValue0: .449999988
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: .449999988
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: Count
+      Description: 
+      DefaultValue0: 100
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 100
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: Power
+      Description: 
+      DefaultValue0: 2
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 1
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: Scatter
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 1
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: Deviation
+      Description: 
+      DefaultValue0: .100000001
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: .100000001
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 3
+      Name: ShapeSelection
+      Description: 
+      DefaultValue0: 0
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 0
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 3
+      Name: DetailedRoundSharp
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 2
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 1
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: SizeParticle
+      Description: 
+      DefaultValue0: 1.25
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 1.25
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: StretchParticle
+      Description: 
+      DefaultValue0: .0199999996
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: .0199999996
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  m_PlayOnStart: 0
+  m_FxName: Particles/Blast.pkfx
+  m_BoundFx: {fileID: 102900000, guid: 5f7090e13f58163438aea8dcddda1edf, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: nameColorAtt.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorRangeAtt.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Value0
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PlayOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: nameColorAtt.Array.data[0]
+      value: CustomColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: nameColorAtt.Array.data[1]
+      value: SubColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Value0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.Name
+      value: GlobalScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.Type
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.Name
+      value: CustomColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.DefaultValue1
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.DefaultValue2
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MaxValue1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MaxValue2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Value0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Value1
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Value2
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.Type
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.Name
+      value: SubColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.DefaultValue1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.DefaultValue2
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.MaxValue1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.MaxValue2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Value0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Value1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Value2
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.Type
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.Name
+      value: Direction
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.DefaultValue0
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MinValue0
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MinValue1
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MinValue2
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MaxValue1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MaxValue2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Value0
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Descriptor.Name
+      value: Speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Descriptor.DefaultValue0
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Value0
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.Name
+      value: Duration
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.DefaultValue0
+      value: .449999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Value0
+      value: .449999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Descriptor.Name
+      value: Count
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Descriptor.DefaultValue0
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Value0
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.Name
+      value: Power
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.DefaultValue0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Descriptor.Name
+      value: Scatter
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Value0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Descriptor.Name
+      value: Deviation
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Descriptor.DefaultValue0
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Value0
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.Name
+      value: ShapeSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.Name
+      value: DetailedRoundSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.MaxValue0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Value0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.Name
+      value: SizeParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.DefaultValue0
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Value0
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[13].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[13].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[13].m_Descriptor.Name
+      value: StretchParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[13].m_Descriptor.DefaultValue0
+      value: .0199999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[13].m_Value0
+      value: .0199999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxName
+      value: Particles/Blast.pkfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_BoundFx
+      value: 
+      objectReference: {fileID: 102900000, guid: 5f7090e13f58163438aea8dcddda1edf,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: colorRangeAtt.Array.data[0].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: lookAtCamera
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 143146}
+  m_IsPrefabParent: 1

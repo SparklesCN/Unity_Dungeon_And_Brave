@@ -1,0 +1,758 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &162708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 403344}
+  - 114: {fileID: 11455216}
+  - 114: {fileID: 11498276}
+  m_Layer: 0
+  m_Name: GroundHit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &403344
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11455216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 325033367, guid: 785ff59215cab58499bfdd3f0a306c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FxAttributesList:
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 1
+      Name: GlobalScale
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 0
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 5
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 3
+      Name: ImpactSize
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 2
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 1
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 30
+      MinMaxFlag: 3
+      Name: ImpactColor
+      Description: 
+      DefaultValue0: 0
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 1
+      MaxValue2: 1
+      MaxValue3: 0
+    m_Value0: 0
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 22
+      MinMaxFlag: 3
+      Name: DebrisCount
+      Description: 
+      DefaultValue0: 2.80259693e-44
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1.40129846e-43
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 2.80259693e-44
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 3
+      Name: DebrisSize
+      Description: 
+      DefaultValue0: .5
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: .5
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 3
+      Name: DebrisProjectionForce
+      Description: 
+      DefaultValue0: 5
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 2
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 10
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 5
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 3
+      Name: DebrisRotationSpeed
+      Description: 
+      DefaultValue0: 2
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 2
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 2
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 30
+      MinMaxFlag: 3
+      Name: DebrisColor
+      Description: 
+      DefaultValue0: .300000012
+      DefaultValue1: .150000006
+      DefaultValue2: .0500000007
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 1
+      MaxValue2: 1
+      MaxValue3: 0
+    m_Value0: .300000012
+    m_Value1: .150000006
+    m_Value2: .0500000007
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 22
+      MinMaxFlag: 3
+      Name: SparksCount
+      Description: 
+      DefaultValue0: 1.40129846e-44
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 2.80259693e-44
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 1.40129846e-44
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 3
+      Name: SparksSize
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 2
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: 1
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 30
+      MinMaxFlag: 3
+      Name: SparksColor
+      Description: 
+      DefaultValue0: 1
+      DefaultValue1: .800000012
+      DefaultValue2: .5
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 1
+      MaxValue2: 1
+      MaxValue3: 0
+    m_Value0: 1
+    m_Value1: .800000012
+    m_Value2: .5
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 28
+      MinMaxFlag: 3
+      Name: SmokeSize
+      Description: 
+      DefaultValue0: .100000001
+      DefaultValue1: 0
+      DefaultValue2: 0
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 0
+      MaxValue2: 0
+      MaxValue3: 0
+    m_Value0: .100000001
+    m_Value1: 0
+    m_Value2: 0
+    m_Value3: 0
+  - m_Descriptor:
+      Type: 30
+      MinMaxFlag: 3
+      Name: SmokeColor
+      Description: 
+      DefaultValue0: .300000012
+      DefaultValue1: .200000003
+      DefaultValue2: .100000001
+      DefaultValue3: 0
+      MinValue0: 0
+      MinValue1: 0
+      MinValue2: 0
+      MinValue3: 0
+      MaxValue0: 1
+      MaxValue1: 1
+      MaxValue2: 1
+      MaxValue3: 0
+    m_Value0: .300000012
+    m_Value1: .200000003
+    m_Value2: .100000001
+    m_Value3: 0
+  m_PlayOnStart: 0
+  m_FxName: Particles/GroundHit.pkfx
+  m_BoundFx: {fileID: 102900000, guid: ff9de194749c24c4780946841458a0f0, type: 3}
+--- !u!114 &11498276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2485c950b54f23489e2af319bbf8718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAtCamera: 0
+  theCamera: {fileID: 0}
+  nameColorAtt: []
+  colorRangeAtt: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Value0
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PlayOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.MinMaxFlag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.Name
+      value: GlobalScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[0].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.Name
+      value: ImpactSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Descriptor.MaxValue0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[1].m_Value0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.Type
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.Name
+      value: ImpactColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.MaxValue1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[2].m_Descriptor.MaxValue2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.Type
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.Name
+      value: DebrisCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.DefaultValue0
+      value: 2.80259693e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Descriptor.MaxValue0
+      value: 1.40129846e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[3].m_Value0
+      value: 2.80259693e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Descriptor.Name
+      value: DebrisSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Descriptor.DefaultValue0
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[4].m_Value0
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.Name
+      value: DebrisProjectionForce
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.DefaultValue0
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.MinValue0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Descriptor.MaxValue0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[5].m_Value0
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Descriptor.Name
+      value: DebrisRotationSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Descriptor.DefaultValue0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Descriptor.MaxValue0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[6].m_Value0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.Type
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.Name
+      value: DebrisColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.DefaultValue0
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.DefaultValue1
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.DefaultValue2
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.MaxValue1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Descriptor.MaxValue2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Value0
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Value1
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[7].m_Value2
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Descriptor.Type
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Descriptor.Name
+      value: SparksCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Descriptor.DefaultValue0
+      value: 1.40129846e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Descriptor.MaxValue0
+      value: 2.80259693e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[8].m_Value0
+      value: 1.40129846e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Descriptor.Name
+      value: SparksSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Descriptor.DefaultValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Descriptor.MaxValue0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[9].m_Value0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.Type
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.Name
+      value: SparksColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.DefaultValue0
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.DefaultValue1
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.DefaultValue2
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.MaxValue1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Descriptor.MaxValue2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Value0
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Value1
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[10].m_Value2
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.Type
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.Name
+      value: SmokeSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.DefaultValue0
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[11].m_Value0
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.Type
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.MinMaxFlag
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.Name
+      value: SmokeColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.DefaultValue0
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.DefaultValue1
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.DefaultValue2
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.MaxValue0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.MaxValue1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Descriptor.MaxValue2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Value0
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Value1
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxAttributesList.Array.data[12].m_Value2
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FxName
+      value: Particles/GroundHit.pkfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_BoundFx
+      value: 
+      objectReference: {fileID: 102900000, guid: ff9de194749c24c4780946841458a0f0,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 162708}
+  m_IsPrefabParent: 1
