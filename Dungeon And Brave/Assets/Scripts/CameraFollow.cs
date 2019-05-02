@@ -7,12 +7,15 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     public float speed = 5f;
 
+    Transform playerTrans;
+
     // Start is called before the first frame update
     Vector3 constant;
     void Start()
     {
         constant = target.position - transform.position;
-        
+        playerTrans = GameObject.FindWithTag("Player").transform;
+
     }
 
     // Update is called once per frame
@@ -22,6 +25,61 @@ public class CameraFollow : MonoBehaviour
         Vector3 pos = target.position - constant;
         // smoothly change to new position
         transform.position = Vector3.Lerp(transform.position, pos, speed * Time.deltaTime);
-
     }
 }
+
+//// 第三人称镜头跟随，鼠标控制镜头缩放和环绕
+//// refer: https://blog.csdn.net/chq1240/article/details/69167425
+//public class CameraFollow : MonoBehaviour
+//{
+//    //请在Editor界面选定摄像头的锁定目标，推荐选定模型的头部文件
+//    public Transform target;
+//    //防止镜头卡死,在使用前把镜头放在合适位置 
+//    Vector3 CameraDis;
+//    // 初始化 
+//    void Start()
+//    {
+//        CameraDis = transform.position - target.position;
+//    }
+//    void LateUpdate()
+//    {
+
+//        Scale();
+//        transform.position = target.position + CameraDis;
+//        transform.LookAt(target);
+//        Rotate();
+//    }
+//    //缩放
+//    private void Scale()
+//    {
+//        float Scaledis = CameraDis.magnitude;
+//        Scaledis -= Input.GetAxis("Mouse ScrollWheel") * 5;
+//        //限制缩放
+//        if ((Scaledis <= 2))
+//        {
+//            Scaledis = 2;
+//        }
+//        else if (Scaledis >= 8)
+//            Scaledis = 8;
+//        CameraDis = CameraDis.normalized * Scaledis;
+//    }
+//    //摄像头环绕
+//    private void Rotate()
+//    {
+//        //速度可以通过修改数字来调整
+//        transform.RotateAround(target.position, Vector3.up, Input.GetAxis("Mouse X") * 10);
+//        float t = Input.GetAxis("Mouse Y") * -1 / 5;
+//        CameraDis = transform.position - target.position;
+//        CameraDis.y += t;
+//        //对旋转的角度加以限制
+//        if (CameraDis.y >= 2)
+//        {
+//            CameraDis.y = 2;
+//        }
+//        else if (CameraDis.y <= 0)
+//        {
+//            CameraDis.y = 0;
+//        }
+//    }
+//}
+
