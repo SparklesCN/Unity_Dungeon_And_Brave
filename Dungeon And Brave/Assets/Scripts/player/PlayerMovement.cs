@@ -11,10 +11,11 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
     int floor;
     float camRayL = 100f;
+    public GameObject attack;
+    public Transform spellPos;
 
-
-    public float moveSpeed = 2f;
-    public float rotateSpeed = 2f;
+    //public float moveSpeed = 2f;
+    //public float rotateSpeed = 2f;
 
     // Start is called before the first frame update
     private void Awake()
@@ -32,33 +33,37 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxisRaw("Vertical");
 
         Move(x, z);
-        //Turning();
+        Turning();
         Animation(x, z);
     }
 
     private void Move(float x, float z)
     {
-        ////according to input come up with vector3
-        //move.Set(x, 0f, z); 
-        ////normalize
-        //move = move.normalized * speed * Time.deltaTime;
-        ////transform.position = Vector3.Lerp(transform.position, transform.position + move, speed);
-        //playerRigidbody.MovePosition(transform.position + move);
+        //according to input come up with vector3
+        move.Set(x, 0f, z); 
+        //normalize
+        move = move.normalized * speed * Time.deltaTime;
+        //transform.position = Vector3.Lerp(transform.position, transform.position + move, speed);
+        playerRigidbody.MovePosition(transform.position + move);
 
         //refer: https://blog.csdn.net/lyh916/article/details/45952517
 
-        if (x != 0 || z != 0)
-        {
-            Vector3 targetDirection = new Vector3(x, 0, z);
-            float y = Camera.main.transform.rotation.eulerAngles.y;
-            targetDirection = Quaternion.Euler(0, y, 0) * targetDirection;
+        //if (x != 0 || z != 0)
+        //{
+        //    Vector3 targetDirection = new Vector3(x, 0, z);
+        //    float y = Camera.main.transform.rotation.eulerAngles.y;
+        //    targetDirection = Quaternion.Euler(0, y, 0) * targetDirection;
 
-            transform.Translate(targetDirection * Time.deltaTime * moveSpeed, Space.World);
-        }
-        if (Input.GetKey(KeyCode.J))
-        {
-            transform.Rotate(-Vector3.up * Time.deltaTime * rotateSpeed);
-        }
+        //    transform.Translate(targetDirection * Time.deltaTime * moveSpeed, Space.World);
+        //}
+        //if (Input.GetKey(KeyCode.J))
+        //{
+        //    transform.Rotate(-Vector3.up * Time.deltaTime * rotateSpeed);
+        //}
+
+
+         //test for instance create
+        //Instantiate(attack, spellPos.position, spellPos.rotation).GetComponent<ParticleSystem>().Play();
     }
 
     private void Turning()

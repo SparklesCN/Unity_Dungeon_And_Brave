@@ -7,14 +7,12 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     public float speed = 5f;
 
-    Transform playerTrans;
 
     // Start is called before the first frame update
     Vector3 constant;
     void Start()
     {
         constant = target.position - transform.position;
-        playerTrans = GameObject.FindWithTag("Player").transform;
 
     }
 
