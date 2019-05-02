@@ -1,0 +1,29 @@
+0000-0035 loop Idle
+0036-0188 loop Idle01
+0190-0223 loop Walk
+0225-0241 loop Run
+0243-0271 loop Jump
+0273-0298 loop Fight
+0299-0337 loop Fight01
+0339-0458 Lie Down
+0459-0539 loop Sleep
+0540-0657 StundUp
+0659-0753 Death01
+0755-0873 Death02
+0875-0972 loop MAgic
+0974-1007 loop Creeping
+1008-1040 loop Creeping Back
+1042-1074-loop Walk Back
+1076-1151 loop Attack Combo
+1153-1211 loop Idle Wounded
+1213-1240 loop Walk Wounded
+1242-1282 loop Walk 01
+1284-1307 loop Hit Left
+1308-1332 loop Hit Block
+1333-1355 loop Hit Up
+1356-1375 loop Hit Back
+1376-1400 loop Hit Front
+1401-1420 loop Hit Right
+1422-1466 loop Walk 01 Back 
+1468-1515 loop Attack
+1517-1636 loop Idle

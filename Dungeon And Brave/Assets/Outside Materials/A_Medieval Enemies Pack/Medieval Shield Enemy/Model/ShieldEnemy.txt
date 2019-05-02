@@ -1,0 +1,4 @@
+0000-0018 loop Walk
+0020-0037 loop Attack
+0039-0048 loop Hit
+0049-0063 Death

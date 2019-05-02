@@ -1,0 +1,10 @@
+000-019 loop  Run
+020-040 loop  Attack
+040-051 loop  Hit
+052-063 loop  Death
+065-084 loop  Walk
+086-144 loop  Idle
+145-175 loop  Attack_01
+176-205 loop  Hit Front
+206-235 loop  Hit Back
+236-264 loop  Jump

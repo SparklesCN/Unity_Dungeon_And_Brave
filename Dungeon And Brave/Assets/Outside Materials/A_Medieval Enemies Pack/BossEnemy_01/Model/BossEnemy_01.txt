@@ -1,0 +1,14 @@
+0000-0000 Boind Pose
+0001-0029 loop walk
+0030-0059 loop Jump
+0060-0074 Death
+0076-0132 loop Idle
+0134-0192 loop Fight Idle
+0194-0224 loop Attack
+0225-0254 loop Attack Right Hand
+0255-0279 loop Attack Leftt Hand
+0281-0307 loop Run
+0309-0324 loop Hit Right
+0325-0339 loop Hit Left
+0340-0354 loop Hit Front
+0355-0369 loop Hit Back

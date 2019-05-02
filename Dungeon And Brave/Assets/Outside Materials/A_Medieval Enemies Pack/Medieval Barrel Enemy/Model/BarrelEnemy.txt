@@ -1,0 +1,8 @@
+0000-0029 loo Walk
+0030-0049 loop Jump
+0050-0064 loop Hit
+0065-0086 Loop Death
+0088-0119 loop Talking
+0120-0199 loop Idle
+0200-0214 loop Hit Front
+0215-0229 loop Hit BAck
