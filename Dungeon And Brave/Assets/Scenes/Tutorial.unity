@@ -13499,7 +13499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &459701003
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18342,7 +18342,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 25
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -35057,6 +35057,7 @@ GameObject:
   - component: {fileID: 1203875813}
   - component: {fileID: 1203875816}
   - component: {fileID: 1203875817}
+  - component: {fileID: 1203875818}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -35172,6 +35173,21 @@ MonoBehaviour:
   attact: {fileID: 1671790395368204686, guid: 3d5d2de60a39648edaa732bda1ec2e16, type: 3}
   spellPos: {fileID: 628470615}
   attactGap: 2
+--- !u!114 &1203875818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203875810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d77676425f20744b092d951c07d19d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingMagic: 100
+  currentMagic: 0
+  magicSlider: {fileID: 627028157}
 --- !u!1001 &1205084275
 PrefabInstance:
   m_ObjectHideFlags: 0
