@@ -15,6 +15,7 @@ public class EnemyAttack : MonoBehaviour
     bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
     float timer;                                // Timer for counting up to the next attack.
     Transform playerTransform;
+    Animation anim;
 
     void Awake()
     {
@@ -22,32 +23,9 @@ public class EnemyAttack : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
         enemyHealth = GetComponent<EnemyHealth>();
+        anim = GetComponent<Animation>();
         //anim = GetComponent<Animator>();
     }
-
-    /*
-    void OnTriggerEnter(Collider other)
-    {
-        // If the entering collider is the player...
-        if (other.gameObject == player)
-        {
-            // ... the player is in range.
-            playerInRange = true;
-            Debug.Log("touch!");
-        }
-    }
-
-
-    void OnTriggerExit(Collider other)
-    {
-        // If the exiting collider is the player...
-        if (other.gameObject == player)
-        {
-            // ... the player is no longer in range.
-            playerInRange = false;
-        }
-    }
-    */
 
     void Update()
     {
@@ -55,7 +33,7 @@ public class EnemyAttack : MonoBehaviour
         timer += Time.deltaTime;
         
         // If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
-        if (timer >= timeBetweenAttacks &&  enemyHealth.currentHealth > 0 && !GetComponent<EnemyMovement>().isNaving)
+        if (timer >= timeBetweenAttacks &&  enemyHealth.currentHealth > 0 && GetComponent<EnemyMovement>().ableToAttact)
         {
             // ... attack.
             Attack();
@@ -75,7 +53,10 @@ public class EnemyAttack : MonoBehaviour
     {
         // Reset the timer.
         timer = 0f;
-        
+
+        // play attack anim
+        anim.Play("Attack");
+
         // If the player has health to lose...
         if (playerHealth.currentHealth > 0)
         {

@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
     public int habitat;
     Vector3 startingPoint;
     //public GameObject test;
+    Animation anim;
     Transform player;               // Reference to the player's position.
     PlayerHealth playerHealth;      // Reference to the player's health.
     EnemyHealth enemyHealth;        // Reference to this enemy's health.
@@ -24,6 +25,7 @@ public class EnemyMovement : MonoBehaviour
         enemyHealth = GetComponent<EnemyHealth>();
         nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
         startingPoint = GetComponent<Transform>().position;
+        anim = GetComponent<Animation>();
         ableToAttact = false;
     }
 
@@ -33,17 +35,16 @@ public class EnemyMovement : MonoBehaviour
         Vector3 curPos = GetComponent<Transform>().position;
         // If the enemy and the player have health left...
 
-        Debug.Log("hit!");
         if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         {
             //inside his habitat
             if (Vector3.Distance(startingPoint, curPos) < habitat)
             {
-                Debug.Log("!!!!!!");
                 if (Vector3.Distance(curPos, player.position) > rangeToSee)
                 {   //can't see player
                     nav.enabled = true;
                     ableToAttact = false;
+                    anim.Play("walk");
                     nav.SetDestination(startingPoint);
                 }
                 else if (Vector3.Distance(curPos, player.position) < stopDistanceWithPlay)
@@ -55,6 +56,7 @@ public class EnemyMovement : MonoBehaviour
                 {   //see it,but not close enough 
                     nav.enabled = true;
                     ableToAttact = false;
+                    anim.Play("walk");
                     nav.SetDestination(player.position);
                 }
             }
