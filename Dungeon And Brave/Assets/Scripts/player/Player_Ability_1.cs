@@ -6,6 +6,7 @@ public class Player_Ability_1 : MonoBehaviour
 {
     public GameObject ability;
     public Transform spellPos;
+    public int magicCost;
     float myTime = 0f;
     float nextFire = 0.5f;
     public float abilityGap = 1f;
@@ -28,6 +29,7 @@ public class Player_Ability_1 : MonoBehaviour
 
         if (isFire)
         {
+            GetComponent<PlayerMagic>().TakeMagic(magicCost);
             nextFire += abilityGap;
             //Instantiate(Object original, Vector3 position, Quaternion rotation)
             GameObject copy_attact = Instantiate(ability, spellPos.position, spellPos.rotation) as GameObject;
