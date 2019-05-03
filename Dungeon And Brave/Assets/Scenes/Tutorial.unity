@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12192,7 +12192,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistanceWithPlay: 3
-  isNaving: 0
+  rangeToSee: 10
+  ableToAttact: 0
+  isNaving: 1
+  habitat: 20
 --- !u!195 &409972778
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -34813,11 +34816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400090, guid: 86c195d84988d5842bfb072f91d791c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.102830775
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400090, guid: 86c195d84988d5842bfb072f91d791c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0896548
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400090, guid: 86c195d84988d5842bfb072f91d791c8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34875,6 +34878,10 @@ PrefabInstance:
       propertyPath: m_Animation
       value: 
       objectReference: {fileID: 7400012, guid: 72d3bddbac3623243b5a1cfed92ec48b, type: 3}
+    - target: {fileID: 11100000, guid: 86c195d84988d5842bfb072f91d791c8, type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86c195d84988d5842bfb072f91d791c8, type: 3}
 --- !u!1001 &1199513022
