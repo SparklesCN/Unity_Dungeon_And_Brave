@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth;                   // The current health the enemy has.
     public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
     public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
-
+    Text theText;
 
     Animation anim;                              // Reference to the animator.
     CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
@@ -19,6 +20,7 @@ public class EnemyHealth : MonoBehaviour
         // Setting up the references.
         anim = GetComponent<Animation>();
         capsuleCollider = GetComponent<CapsuleCollider>();
+        theText = GameObject.Find("Enemy_HP_Amount").GetComponent<Text>();
 
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
@@ -32,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
             // ... move the enemy down by the sinkSpeed per second.
             transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
         }
+        theText.text = currentHealth.ToString();
     }
 
 

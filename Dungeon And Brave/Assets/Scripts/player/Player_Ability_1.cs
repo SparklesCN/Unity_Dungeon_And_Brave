@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class Player_Ability_1 : MonoBehaviour
 {
-    public GameObject attact;
+    public GameObject ability;
     public Transform spellPos;
     float myTime = 0f;
     float nextFire = 0.5f;
-    public float attactGap = 1f;
+    public float abilityGap = 1f;
     Animator anim;
 
     private void Start()
@@ -19,20 +19,20 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
+        Ability();
     }
-    void Attack()
+    void Ability()
     {
         myTime += Time.deltaTime;
-        bool isFire = Input.GetButton("Fire1") && myTime > nextFire;
+        bool isFire = Input.GetKeyDown("q") && myTime > nextFire;
 
         if (isFire)
         {
-            nextFire += attactGap;
+            nextFire += abilityGap;
             //Instantiate(Object original, Vector3 position, Quaternion rotation)
-            GameObject copy_attact = Instantiate(attact, spellPos.position, spellPos.rotation) as GameObject;
+            GameObject copy_attact = Instantiate(ability, spellPos.position, spellPos.rotation) as GameObject;
         }
-        anim.SetBool("isAttack", isFire);
+        anim.SetBool("isAbility", isFire);
     }
 
 
