@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12230,7 +12230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b37c197ed19c48558c84bcc1d1be185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 3
   attackDamage: 10
 --- !u!114 &409972780
 MonoBehaviour:
@@ -34814,6 +34814,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossEnemy_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: 86c195d84988d5842bfb072f91d791c8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400090, guid: 86c195d84988d5842bfb072f91d791c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -34877,7 +34881,7 @@ PrefabInstance:
     - target: {fileID: 11100000, guid: 86c195d84988d5842bfb072f91d791c8, type: 3}
       propertyPath: m_Animation
       value: 
-      objectReference: {fileID: 7400012, guid: 72d3bddbac3623243b5a1cfed92ec48b, type: 3}
+      objectReference: {fileID: 7400008, guid: 72d3bddbac3623243b5a1cfed92ec48b, type: 3}
     - target: {fileID: 11100000, guid: 86c195d84988d5842bfb072f91d791c8, type: 3}
       propertyPath: m_PlayAutomatically
       value: 1
@@ -44623,6 +44627,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100122, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100206, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -44863,10 +44875,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 100122, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 100124, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -45028,10 +45036,6 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100204, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100206, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
