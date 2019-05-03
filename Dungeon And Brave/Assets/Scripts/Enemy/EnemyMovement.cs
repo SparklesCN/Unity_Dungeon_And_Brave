@@ -1,18 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float stopDistanceWithPlay;
+
+    Transform player;               // Reference to the player's position.
+    PlayerHealth playerHealth;      // Reference to the player's health.
+    EnemyHealth enemyHealth;        // Reference to this enemy's health.
+    UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
+
+
+    void Awake()
     {
-        
+        // Set up the references.
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerHealth = player.GetComponent<PlayerHealth>();
+        enemyHealth = GetComponent<EnemyHealth>();
+        nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        // If the enemy and the player have health left...
+        if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && Mathf.Abs(GetComponent<Transform>().position.z - player.position.z) >= stopDistanceWithPlay)
+        {
+            nav.enabled = true;
+            // ... set the destination of the nav mesh agent to the player.
+            nav.SetDestination(player.position);
+        }
+        // Otherwise...
+        else
+        {
+            // ... disable the nav mesh agent.
+            nav.enabled = false;
+        }
     }
+
+  
 }

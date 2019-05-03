@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttact : MonoBehaviour
+public class PlayerAttack : MonoBehaviour
 {
     public GameObject attact;
     public Transform spellPos;

@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
     int floor;
     float camRayL = 100f;
-    public GameObject attack;
-    public Transform spellPos;
+
+
 
     //public float moveSpeed = 2f;
     //public float rotateSpeed = 2f;
