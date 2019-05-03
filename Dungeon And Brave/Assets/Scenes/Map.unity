@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
-=======
   m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
->>>>>>> a8e27a12d7b67b1132d908606853690f9dcdb51a
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -48278,24 +48274,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2023880319}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
---- !u!1001 &2024883959
-PrefabInstance:
-=======
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1835018920}
-  - component: {fileID: 1835018919}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!108 &1835018919
-Light:
->>>>>>> a8e27a12d7b67b1132d908606853690f9dcdb51a
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
