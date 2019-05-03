@@ -3,18 +3,20 @@ using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float stopDistanceWithPlay;
-    public float rangeToSee;
+    public float stopDistanceWithPlay = 3;
+    public float rangeToSee = 10 ;
     public bool ableToAttact;
     public bool isNaving;
-    public int habitat;
-    Vector3 startingPoint;
+    public int habitat = 20;
+
+    Vector3 startingPoint;          
     //public GameObject test;
     Animation anim;
     Transform player;               // Reference to the player's position.
     PlayerHealth playerHealth;      // Reference to the player's health.
     EnemyHealth enemyHealth;        // Reference to this enemy's health.
     UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
+    Transform enemy;
 
 
     void Awake()
@@ -26,6 +28,8 @@ public class EnemyMovement : MonoBehaviour
         nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
         startingPoint = GetComponent<Transform>().position;
         anim = GetComponent<Animation>();
+        enemy = GetComponent<Transform>();
+
         ableToAttact = false;
     }
 
@@ -42,10 +46,23 @@ public class EnemyMovement : MonoBehaviour
             {
                 if (Vector3.Distance(curPos, player.position) > rangeToSee)
                 {   //can't see player
-                    nav.enabled = true;
-                    ableToAttact = false;
-                    anim.Play("walk");
-                    nav.SetDestination(startingPoint);
+                    Debug.Log(Vector3.Distance(startingPoint, curPos));
+                    if (Vector3.Distance(startingPoint, curPos) < 1)
+                    {
+                        // arrive string point
+                        nav.enabled = false;
+                        ableToAttact = false;
+                        //change rotation to 0, 180, 0
+                        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 180, 0), Time.deltaTime*2);
+                        anim.Play("Idle");
+                    }
+                    else
+                    {
+                        nav.enabled = true;
+                        ableToAttact = false;
+                        anim.Play("walk");
+                        nav.SetDestination(startingPoint);
+                    }
                 }
                 else if (Vector3.Distance(curPos, player.position) < stopDistanceWithPlay)
                 {   //close enough to stop
@@ -62,9 +79,20 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
-                nav.enabled = true;
-                ableToAttact = false;
-                nav.SetDestination(startingPoint);
+                if (Vector3.Distance(curPos, player.position) > rangeToSee)
+                {   //can't see player
+                    nav.enabled = true;
+                    ableToAttact = false;
+                    nav.SetDestination(startingPoint);
+                }
+                else
+                {
+                    nav.enabled = false;
+                    ableToAttact = false;
+                    anim.Play("Idle");
+
+                }
+
             }
         }
     //    if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && Vector3.Distance(GetComponent<Transform>().position, player.position) > stopDistanceWithPlay)
