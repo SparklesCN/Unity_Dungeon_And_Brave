@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         // Set the initial health of the player.
         currentHealth = startingHealth;
+        healthSlider.value = currentHealth;
     }
 
     void Update()

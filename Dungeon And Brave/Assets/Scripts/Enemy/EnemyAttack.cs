@@ -53,9 +53,9 @@ public class EnemyAttack : MonoBehaviour
     {
         // Add the time since Update was last called to the timer.
         timer += Time.deltaTime;
-
+        
         // If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
-        if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
+        if (timer >= timeBetweenAttacks &&  enemyHealth.currentHealth > 0 && !GetComponent<EnemyMovement>().isNaving)
         {
             // ... attack.
             Attack();
@@ -75,12 +75,13 @@ public class EnemyAttack : MonoBehaviour
     {
         // Reset the timer.
         timer = 0f;
-
+        
         // If the player has health to lose...
         if (playerHealth.currentHealth > 0)
         {
             // ... damage the player.
             playerHealth.TakeDamage(attackDamage);
+            
         }
     }
 }
