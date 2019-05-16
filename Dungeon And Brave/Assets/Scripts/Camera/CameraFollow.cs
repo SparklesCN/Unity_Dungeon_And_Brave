@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public float speed = 5f;
+    public float moveSpeed = 10f;
 
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class CameraFollow : MonoBehaviour
         Vector3 pos = target.position - constant;
         // smoothly change to new position
         transform.position = Vector3.Lerp(transform.position, pos, speed * Time.deltaTime);
+    
     }
 }
 
