@@ -25,13 +25,12 @@ public class Player_Ability_1 : MonoBehaviour
     void Ability()
     {
         myTime += Time.deltaTime;
-        bool isFire = Input.GetKeyDown("q") && myTime > nextFire;
+        bool isFire = Input.GetKeyDown("q") && myTime > abilityGap;
 
         if (isFire)
         {
             GetComponent<PlayerMagic>().TakeMagic(magicCost);
-            nextFire += abilityGap;
-            //Instantiate(Object original, Vector3 position, Quaternion rotation)
+            myTime = 0f;
             GameObject copy_attact = Instantiate(ability, spellPos.position, spellPos.rotation) as GameObject;
         }
         anim.SetBool("isAbility", isFire);

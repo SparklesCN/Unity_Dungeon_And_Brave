@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject attact;
     public Transform spellPos;
     float myTime = 0f;
-    public float attactGap = 1f;
+    public float attackGap = 1f;
     Animator anim;
 
     private void Start()
@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
     void Attack()
     {
         myTime += Time.deltaTime;
-        bool isFire = Input.GetButton("Fire1") && myTime > attactGap;
+        bool isFire = Input.GetButton("Fire1") && myTime > attackGap;
 
         if (isFire)
         {
