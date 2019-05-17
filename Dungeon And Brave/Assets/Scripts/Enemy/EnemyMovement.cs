@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     EnemyHealth enemyHealth;        // Reference to this enemy's health.
     UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
     Transform enemy;
+    bool isAC = false;
 
 
     void Awake()
@@ -29,6 +30,10 @@ public class EnemyMovement : MonoBehaviour
         startingPoint = GetComponent<Transform>().position;
         anim = GetComponent<Animation>();
         enemy = GetComponent<Transform>();
+        if (GetComponent<Animator>())
+        {
+            isAC = true;
+        }
 
         ableToAttact = false;
     }
@@ -54,7 +59,19 @@ public class EnemyMovement : MonoBehaviour
                         ableToAttact = false;
                         //change rotation to 0, 180, 0
                         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 180, 0), Time.deltaTime*2);
+
+                        if (isAC)
+                        { 
+                            // this enemy have AC;
+                            // plz set bool and triger
+                        }
+                        else 
+                        {
+                            // this enemy only Animation
+                            // plz switch between Anims
+                        }
                         anim.Play("Idle");
+
                     }
                     else
                     {
