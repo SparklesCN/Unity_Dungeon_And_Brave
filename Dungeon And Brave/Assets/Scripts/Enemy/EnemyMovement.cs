@@ -5,7 +5,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public float stopDistanceWithPlay = 3;
     public float rangeToSee = 10 ;
-    public bool ableToAttact;
+    public bool ableToAttack;
     public bool isNaving;
     public int habitat = 20;
 
@@ -38,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
 
         }
 
-        ableToAttact = false;
+        ableToAttack = false;
     }
 
 
@@ -54,12 +54,11 @@ public class EnemyMovement : MonoBehaviour
             {
                 if (Vector3.Distance(curPos, player.position) > rangeToSee)
                 {   //can't see player
-                    Debug.Log(Vector3.Distance(startingPoint, curPos));
                     if (Vector3.Distance(startingPoint, curPos) < 1)
                     {
                         // arrive string point
                         nav.enabled = false;
-                        ableToAttact = false;
+                        ableToAttack = false;
                         //change rotation to 0, 180, 0
                         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 180, 0), Time.deltaTime*2);
 
@@ -80,13 +79,15 @@ public class EnemyMovement : MonoBehaviour
                     else
                     {
                         nav.enabled = true;
-                        ableToAttact = false;
+                        ableToAttack = false;
                         nav.SetDestination(startingPoint);
                         if (isAC)
                         {
                             // this enemy have AC;
                             // plz set bool and triger
+
                             ac.SetBool("isRun", true);
+                            ac.SetBool("isAttack", false);
 
                         }
                         else
@@ -100,12 +101,12 @@ public class EnemyMovement : MonoBehaviour
                 else if (Vector3.Distance(curPos, player.position) < stopDistanceWithPlay)
                 {   //close enough to stop
                     nav.enabled = false;
-                    ableToAttact = true;
+                    ableToAttack = true;
                     if (isAC)
                     {
                         // this enemy have AC;
                         // plz set bool and triger
-                        ac.SetBool("isAttack", false);
+                        ac.SetBool("isAttack", true);
 
                     }
                     else
@@ -118,13 +119,14 @@ public class EnemyMovement : MonoBehaviour
                 else
                 {   //see it,but not close enough 
                     nav.enabled = true;
-                    ableToAttact = false;
+                    ableToAttack = false;
                     nav.SetDestination(player.position);
                     if (isAC)
                     {
                         // this enemy have AC;
                         // plz set bool and triger
                         ac.SetBool("isRun", true);
+                        ac.SetBool("isAttack", false);
 
                     }
                     else
@@ -140,13 +142,14 @@ public class EnemyMovement : MonoBehaviour
                 if (Vector3.Distance(curPos, player.position) > rangeToSee)
                 {   //can't see player
                     nav.enabled = true;
-                    ableToAttact = false;
+                    ableToAttack = false;
                     nav.SetDestination(startingPoint);
                     if (isAC)
                     {
                         // this enemy have AC;
                         // plz set bool and triger
                         ac.SetBool("isRun", true);
+                        ac.SetBool("isAttack", false);
 
                     }
                     else
@@ -159,7 +162,7 @@ public class EnemyMovement : MonoBehaviour
                 else
                 {
                     nav.enabled = false;
-                    ableToAttact = false;
+                    ableToAttack = false;
                     if (isAC)
                     {
                         // this enemy have AC;

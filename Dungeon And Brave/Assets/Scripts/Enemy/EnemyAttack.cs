@@ -40,7 +40,7 @@ public class EnemyAttack : MonoBehaviour
         timer += Time.deltaTime;
         
         // If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
-        if (timer >= timeBetweenAttacks &&  enemyHealth.currentHealth > 0 && GetComponent<EnemyMovement>().ableToAttact)
+        if (timer >= timeBetweenAttacks &&  enemyHealth.currentHealth > 0 && GetComponent<EnemyMovement>().ableToAttack)
         {
             // ... attack.
             Attack();
@@ -63,19 +63,20 @@ public class EnemyAttack : MonoBehaviour
 
 
         // play attack anim is move to enemyMovement 
-        //if(isAC)
-        //{
-        //    // this enemy have AC;
-        //    // plz set bool and triger
-        //    ac.SetBool("isAttack", false);
+        if(isAC)
+        {
+            // this enemy have AC;
+            // plz set bool and triger
+            ac.SetBool("isAttack", true);
 
-        //}
-        //else 
-        //{
-        //    // this enemy only Animation
-        //    // plz switch between Anims
-        //    anim.Play("Attack");
-        //}
+
+        }
+        else 
+        {
+            // this enemy only Animation
+            // plz switch between Anims
+            anim.Play("Attack");
+        }
 
         // If the player has health to lose...
         if (playerHealth.currentHealth > 0)

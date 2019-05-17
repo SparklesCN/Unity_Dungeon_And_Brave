@@ -16,10 +16,10 @@ public class PlayerAttack : MonoBehaviour
     float target = 280;
 
     int level = 1;
-    int curEXP = 100;
+    int curEXP = 1;
     public int constantOFlevel = 1;
     //source:https://www.diablowiki.net/Experience_level_chart
-    IList<int> expList = new List<int> {0, 280, 2700, 4500, 6600, 9000, 11700, 14000, 16500, 19200};
+    IList<int> expList = new List<int> {280, 2700, 4500, 6600, 9000, 11700, 14000, 16500, 19200};
 
 
     private void Start()
@@ -40,7 +40,6 @@ public class PlayerAttack : MonoBehaviour
         {
             curEXP += 1;
         }
-        Debug.Log(curEXP);
         levelSlider.value = curEXP / target * 100;
 
     }
@@ -58,7 +57,7 @@ public class PlayerAttack : MonoBehaviour
         anim.SetBool("isAttack", isFire);
     }
 
-    public void levelup(int enemyExp)
+    public void getExp(int enemyExp)
     {
         target = expList[level-1];
         curEXP += enemyExp;

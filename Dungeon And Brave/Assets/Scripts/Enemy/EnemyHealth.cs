@@ -8,8 +8,6 @@ public class EnemyHealth : MonoBehaviour
     public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
     public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
     public int enemyEXP = 10;
-    Text theText;
-
     Animation anim;                              // Reference to the animator.
     CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
     bool isDead;                                // Whether the enemy is dead.
@@ -22,8 +20,6 @@ public class EnemyHealth : MonoBehaviour
         // Setting up the references.
         anim = GetComponent<Animation>();
         capsuleCollider = GetComponent<CapsuleCollider>();
-        theText = GameObject.Find("Enemy_HP_Amount").GetComponent<Text>();
-
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
 
@@ -43,7 +39,6 @@ public class EnemyHealth : MonoBehaviour
             // ... move the enemy down by the sinkSpeed per second.
             transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
         }
-        theText.text = currentHealth.ToString();
     }
 
 
@@ -51,11 +46,14 @@ public class EnemyHealth : MonoBehaviour
     {
         // If the enemy is dead...
         if (isDead)
+        {
             // ... no need to take damage so exit the function.
             return;
+        }
 
 
         // Reduce the current health by the amount of damage sustained.
+        Debug.Log(currentHealth);
         currentHealth -= amount;
 
         // If the current health is less than or equal to zero...
@@ -93,7 +91,7 @@ public class EnemyHealth : MonoBehaviour
 
         //calling level up function to update player
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<PlayerAttack>().levelup(enemyEXP);
+        player.GetComponent<PlayerAttack>().getExp(enemyEXP);
     }
 
 

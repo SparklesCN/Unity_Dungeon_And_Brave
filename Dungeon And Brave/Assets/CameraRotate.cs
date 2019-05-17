@@ -34,14 +34,13 @@ public class CameraRotate : MonoBehaviour
         // if the ray from player to camera, hit something
         if (Physics.Linecast(transform.position, player_position, out hit))
         {
-            Debug.Log(hit.point);
+            //Debug.Log(hit.point);
             //Debug.Log(hit.collider.gameObject.layer);
             //check if object that we hit has object
             string tag = hit.collider.gameObject.tag;
             if (tag == "Camera")
             {
                 //move camera foward
-                Debug.Log("hit");
                 float cur_dis = Vector3.Distance(hit.point, player_position);
                 if (cur_dis < dis)
                 {

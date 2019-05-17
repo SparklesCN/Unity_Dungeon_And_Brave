@@ -483,7 +483,10 @@ GameObject:
   - component: {fileID: 7504612359776910725}
   - component: {fileID: 7504612359769754463}
   - component: {fileID: 666210019}
-  - component: {fileID: 666210017}
+  - component: {fileID: 173225067}
+  - component: {fileID: 173225071}
+  - component: {fileID: 173225072}
+  - component: {fileID: 173225073}
   m_Layer: 0
   m_Name: Undead_Warrior
   m_TagString: Enemy
@@ -540,7 +543,7 @@ CapsuleCollider:
   m_Height: 2.8468523
   m_Direction: 1
   m_Center: {x: 0, y: 0.92342615, z: -0.630188}
---- !u!114 &666210017
+--- !u!114 &173225067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -549,9 +552,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 7504612359777172541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a7453d2deb8b439ca9090e8f8e53e07, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b37c197ed19c48558c84bcc1d1be185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBetweenAttacks: 2
+  attackDamage: 10
+--- !u!114 &173225071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504612359777172541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922c14d9e95ad43e7b0effd4c4c9c59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 20
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  enemyEXP: 60
+--- !u!114 &173225072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504612359777172541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39327f27799314fd1a125559f2fda51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopDistanceWithPlay: 2
+  rangeToSee: 6
+  ableToAttack: 0
+  isNaving: 1
+  habitat: 10
+--- !u!195 &173225073
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504612359777172541}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7504612359777174131
 GameObject:
   m_ObjectHideFlags: 0

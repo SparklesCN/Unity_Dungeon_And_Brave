@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody playerRigidbody;
     Animator anim;
     int floor;
-    float camRayL = 100f;
+    //float camRayL = 100f;
 
 
 
