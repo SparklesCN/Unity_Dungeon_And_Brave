@@ -16,6 +16,8 @@ public class EnemyAttack : MonoBehaviour
     float timer;                                // Timer for counting up to the next attack.
     Transform playerTransform;
     Animation anim;
+    Animator ac;
+    bool isAC = false;
 
     void Awake()
     {
@@ -24,7 +26,12 @@ public class EnemyAttack : MonoBehaviour
         playerHealth = player.GetComponent<PlayerHealth>();
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent<Animation>();
-        //anim = GetComponent<Animator>();
+        if (GetComponent<Animator>())
+        {
+            isAC = true;
+            ac = GetComponent<Animator>();
+
+        }
     }
 
     void Update()
@@ -54,8 +61,21 @@ public class EnemyAttack : MonoBehaviour
         // Reset the timer.
         timer = 0f;
 
-        // play attack anim
-        anim.Play("Attack");
+
+        // play attack anim is move to enemyMovement 
+        //if(isAC)
+        //{
+        //    // this enemy have AC;
+        //    // plz set bool and triger
+        //    ac.SetBool("isAttack", false);
+
+        //}
+        //else 
+        //{
+        //    // this enemy only Animation
+        //    // plz switch between Anims
+        //    anim.Play("Attack");
+        //}
 
         // If the player has health to lose...
         if (playerHealth.currentHealth > 0)

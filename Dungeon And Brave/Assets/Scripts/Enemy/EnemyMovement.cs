@@ -12,12 +12,12 @@ public class EnemyMovement : MonoBehaviour
     Vector3 startingPoint;          
     //public GameObject test;
     Animation anim;
-    Animator ac;
     Transform player;               // Reference to the player's position.
     PlayerHealth playerHealth;      // Reference to the player's health.
     EnemyHealth enemyHealth;        // Reference to this enemy's health.
     UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
     Transform enemy;
+    Animator ac;
     bool isAC = false;
 
 
@@ -67,7 +67,7 @@ public class EnemyMovement : MonoBehaviour
                         {
                             // this enemy have AC;
                             // plz set bool and triger
-                            //ac.SetBool();
+                            ac.SetBool("isRun", false);
 
                         }
                         else 
@@ -81,21 +81,58 @@ public class EnemyMovement : MonoBehaviour
                     {
                         nav.enabled = true;
                         ableToAttact = false;
-                        anim.Play("walk");
                         nav.SetDestination(startingPoint);
+                        if (isAC)
+                        {
+                            // this enemy have AC;
+                            // plz set bool and triger
+                            ac.SetBool("isRun", true);
+
+                        }
+                        else
+                        {
+                            // this enemy only Animation
+                            // plz switch between Anims
+                            anim.Play("walk");
+                        }
                     }
                 }
                 else if (Vector3.Distance(curPos, player.position) < stopDistanceWithPlay)
                 {   //close enough to stop
                     nav.enabled = false;
                     ableToAttact = true;
+                    if (isAC)
+                    {
+                        // this enemy have AC;
+                        // plz set bool and triger
+                        ac.SetBool("isAttack", false);
+
+                    }
+                    else
+                    {
+                        // this enemy only Animation
+                        // plz switch between Anims
+                        anim.Play("Attack");
+                    }
                 }
                 else
                 {   //see it,but not close enough 
                     nav.enabled = true;
                     ableToAttact = false;
-                    anim.Play("walk");
                     nav.SetDestination(player.position);
+                    if (isAC)
+                    {
+                        // this enemy have AC;
+                        // plz set bool and triger
+                        ac.SetBool("isRun", true);
+
+                    }
+                    else
+                    {
+                        // this enemy only Animation
+                        // plz switch between Anims
+                        anim.Play("walk");
+                    }
                 }
             }
             else
@@ -105,13 +142,37 @@ public class EnemyMovement : MonoBehaviour
                     nav.enabled = true;
                     ableToAttact = false;
                     nav.SetDestination(startingPoint);
+                    if (isAC)
+                    {
+                        // this enemy have AC;
+                        // plz set bool and triger
+                        ac.SetBool("isRun", true);
+
+                    }
+                    else
+                    {
+                        // this enemy only Animation
+                        // plz switch between Anims
+                        anim.Play("walk");
+                    }
                 }
                 else
                 {
                     nav.enabled = false;
                     ableToAttact = false;
-                    anim.Play("Idle");
+                    if (isAC)
+                    {
+                        // this enemy have AC;
+                        // plz set bool and triger
+                        ac.SetBool("isRun", false);
 
+                    }
+                    else
+                    {
+                        // this enemy only Animation
+                        // plz switch between Anims
+                        anim.Play("Idle");
+                    }
                 }
 
             }
@@ -132,6 +193,8 @@ public class EnemyMovement : MonoBehaviour
     //        isNaving = false;
     //    }
     }
+
+
 
     /*private void OnParticleCollision(GameObject other)
     {
