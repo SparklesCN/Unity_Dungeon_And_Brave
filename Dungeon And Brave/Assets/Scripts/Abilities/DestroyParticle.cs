@@ -22,12 +22,10 @@ public class DestroyParticle : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnParticleCollision(GameObject other)
     {
-        Debug.Log("!!!!!!!!!");
         if (other.tag == "Enemy")
         {
-
             other.GetComponent<EnemyHealth>().TakeDamage(damageAmount * c);
         }
         Destroy(gameObject);
