@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     Vector3 startingPoint;          
     //public GameObject test;
     Animation anim;
+    Animator ac;
     Transform player;               // Reference to the player's position.
     PlayerHealth playerHealth;      // Reference to the player's health.
     EnemyHealth enemyHealth;        // Reference to this enemy's health.
@@ -33,6 +34,8 @@ public class EnemyMovement : MonoBehaviour
         if (GetComponent<Animator>())
         {
             isAC = true;
+            ac = GetComponent< Animator >();
+
         }
 
         ableToAttact = false;
@@ -61,17 +64,18 @@ public class EnemyMovement : MonoBehaviour
                         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 180, 0), Time.deltaTime*2);
 
                         if (isAC)
-                        { 
+                        {
                             // this enemy have AC;
                             // plz set bool and triger
+                            //ac.SetBool();
+
                         }
                         else 
                         {
                             // this enemy only Animation
                             // plz switch between Anims
+                            anim.Play("Idle");
                         }
-                        anim.Play("Idle");
-
                     }
                     else
                     {
