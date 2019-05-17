@@ -14,7 +14,8 @@ public class EnemyHealth : MonoBehaviour
     CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
     bool isDead;                                // Whether the enemy is dead.
     bool isSinking;                             // Whether the enemy has started sinking through the floor.
-
+    Animator ac;
+    bool isAC = false;
 
     void Awake()
     {
@@ -25,6 +26,13 @@ public class EnemyHealth : MonoBehaviour
 
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
+
+        if (GetComponent<Animator>())
+        {
+            isAC = true;
+            ac = GetComponent<Animator>();
+
+        }
     }
 
     void Update()
@@ -69,7 +77,19 @@ public class EnemyHealth : MonoBehaviour
         capsuleCollider.isTrigger = true;
 
         // Tell the animator that the enemy is dead.
-        anim.Play("Death");
+        if (isAC)
+        {
+            // this enemy have AC;
+            // plz set bool and triger
+            ac.SetTrigger("Dead");
+
+        }
+        else
+        {
+            // this enemy only Animation
+            // plz switch between Anims
+            anim.Play("Death");
+        }
 
         //calling level up function to update player
         GameObject player = GameObject.FindGameObjectWithTag("Player");
