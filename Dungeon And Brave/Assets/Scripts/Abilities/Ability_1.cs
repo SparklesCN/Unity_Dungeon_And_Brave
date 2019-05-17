@@ -19,7 +19,6 @@ public class Ability_1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hiii");
         if(other.tag == "Enemy")
         {
             other.GetComponent<EnemyHealth>().TakeDamage(damageAmount);

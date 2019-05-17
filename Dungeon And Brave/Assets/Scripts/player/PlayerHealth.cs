@@ -27,10 +27,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("1"))
-        {
-            currentHealth = 100;
-        }
+        //if (Input.GetKeyDown("1"))
+        //{
+        //    currentHealth = 100;
+        //}
         healthSlider.value = currentHealth;
     }
 

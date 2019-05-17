@@ -19,10 +19,10 @@ public class PlayerMagic : MonoBehaviour
     void Update()
     {
         magicSlider.value = currentMagic;
-        if (Input.GetKeyDown("2"))
-        {
-            currentMagic = 100;
-        }
+        //if (Input.GetKeyDown("2"))
+        //{
+        //    currentMagic = 100;
+        //}
     }
 
 

@@ -7,8 +7,8 @@ public class Player_Ability_1 : MonoBehaviour
     public GameObject ability;
     public Transform spellPos;
     public int magicCost;
+    public string key = "1";
     float myTime = 0f;
-    float nextFire = 0.5f;
     public float abilityGap = 1f;
     Animator anim;
 
@@ -25,7 +25,7 @@ public class Player_Ability_1 : MonoBehaviour
     void Ability()
     {
         myTime += Time.deltaTime;
-        bool isFire = Input.GetKeyDown("q") && myTime > abilityGap;
+        bool isFire = Input.GetKeyDown(key) && myTime > abilityGap;
 
         if (isFire)
         {
