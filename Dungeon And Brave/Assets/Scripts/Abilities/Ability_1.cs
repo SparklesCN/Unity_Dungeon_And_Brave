@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ability_1 : MonoBehaviour
 {
-    public int damageAmount;
+    public int damageAmount = 50;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +19,10 @@ public class Ability_1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Enemy")
+
+        if (other.gameObject.tag == "Enemy")
         {
-            other.GetComponent<EnemyHealth>().TakeDamage(damageAmount);
+            other.gameObject.GetComponent<EnemyHealth>().TakeDamage(damageAmount);
         }
     }
 }

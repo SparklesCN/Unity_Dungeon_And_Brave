@@ -24,6 +24,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
+        Invoke("DismissTutorialInfo", 5f);
+        target = expList[level - 1];
         anim = GetComponent<Animator>();
         levelSlider = GameObject.Find("LevelSlider").GetComponent<Slider>();
         expText = GameObject.Find("ExpText").GetComponent<Text>();
@@ -34,12 +36,9 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         Attack();
-        expText.text = curEXP.ToString() + "/" + target.ToString();
+        expText.text = "Exp: " + curEXP.ToString() + "/" + target.ToString();
         levelText.text = "Level: " + level.ToString();
-        if (curEXP == 0)
-        {
-            curEXP += 1;
-        }
+
         levelSlider.value = curEXP / target * 100;
 
     }
@@ -59,16 +58,43 @@ public class PlayerAttack : MonoBehaviour
 
     public void getExp(int enemyExp)
     {
-        target = expList[level-1];
+
         curEXP += enemyExp;
         if (curEXP >= target)
         {
-            curEXP = 0;
-            level++;
-            constantOFlevel = (int) (constantOFlevel * 1.2f);
+            LevelUp();
         }
 
     }
 
+    void LevelUp()
+    {
+        curEXP = 0;
+        level++;
+        constantOFlevel = (int)(constantOFlevel * 1.2f);
+        target = expList[level - 1];
+
+        // unlock speel_ 1
+        GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
+        GameObject.FindWithTag("Player").GetComponent<Player_Ability_1>().enabled = true;
+        GameObject.Find("LevelUpText").GetComponent<Text>().enabled = true;
+        GameObject.Find("AbUnlockText").GetComponent<Text>().enabled = true;
+
+        Invoke("DismissLevelUpInfo", 5f);
+        Invoke("DismissAbilityUnlockInfo", 5f);
+    }
+    void DismissTutorialInfo()
+    {
+        GameObject.Find("TutorialText").GetComponent<Text>().enabled = false;
+    }
+    void DismissLevelUpInfo()
+    {
+        GameObject.Find("LevelUpText").GetComponent<Text>().enabled = false;
+    }
+
+    void DismissAbilityUnlockInfo()
+    {
+        GameObject.Find("AbUnlockText").GetComponent<Text>().enabled = false;
+    }
 
 }
