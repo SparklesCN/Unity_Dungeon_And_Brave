@@ -24,10 +24,24 @@ public class CameraFollow : MonoBehaviour
         Vector3 pos = target.position - constant;
         // smoothly change to new position
         transform.position = Vector3.Lerp(transform.position, pos, speed * Time.deltaTime);
-    
+        Debug.Log("hit");
+        RaycastHit hit;
+        // if the ray from player to camera, hit something
+        if (Physics.Linecast(target.position + Vector3.up, transform.position, out hit))
+        {
+            //check if object that we hit has object
+            //string tag = hit.collider.gameObject.tag;
+            //if (tag == "Camera")
+            //{
+                //move camera foward
+                Debug.Log("hit");
+                transform.position = hit.point;
+            //} 
+
+        }
+
     }
 }
-
 //// 第三人称镜头跟随，鼠标控制镜头缩放和环绕
 //// refer: https://blog.csdn.net/chq1240/article/details/69167425
 //public class CameraFollow : MonoBehaviour

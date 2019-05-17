@@ -21,6 +21,7 @@ public class DestroyParticle : MonoBehaviour
     {
 
     }
+
     private void OnParticleCollision(GameObject other)
     {
         if (other.tag == "Enemy")

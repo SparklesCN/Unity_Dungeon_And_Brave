@@ -7,6 +7,7 @@ TagManager:
   - Fx
   - SpellPos
   - Enemy
+  - Camera
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - PostProcessing
   - Floor
   - Player
-  - 
+  - Camera
   - 
   - 
   - 
