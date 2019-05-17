@@ -556,8 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b37c197ed19c48558c84bcc1d1be185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 2
-  attackDamage: 10
+  timeBetweenAttacks: 0.25
+  attackDamage: 2
 --- !u!114 &173225071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistanceWithPlay: 2
-  rangeToSee: 6
+  rangeToSee: 10
   ableToAttack: 0
   isNaving: 1
   habitat: 10
