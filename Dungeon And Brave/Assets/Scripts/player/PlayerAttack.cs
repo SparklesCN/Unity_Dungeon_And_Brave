@@ -79,14 +79,49 @@ public class PlayerAttack : MonoBehaviour
         constantOFlevel = (int)(constantOFlevel * 1.2f);
         target = expList[level - 1];
 
-        // unlock speel_ 1
-        GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
-        GameObject.FindWithTag("Player").GetComponent<Player_Ability_1>().enabled = true;
+        UnlockSpell();
+
+    }
+
+    void UnlockSpell()
+    {
+        if (PlayerPrefs.GetInt("LV") == 2)
+        {
+            // unlock spell_1
+            GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
+            GameObject.FindWithTag("Player").GetComponent<Player_Ability_1>().enabled = true;
+        }
+        //if (PlayerPrefs.GetInt("LV") == 3)
+        //{
+        //    // unlock spell_2
+        //    GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
+        //    GameObject.FindWithTag("Player").GetComponent<Player_Ability_2>().enabled = true;
+        //}
+        //if (PlayerPrefs.GetInt("LV") == 4)
+        //{
+        //    // unlock spell_3
+        //    GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
+        //    GameObject.FindWithTag("Player").GetComponent<Player_Ability_3>().enabled = true;
+        //}
+        //if (PlayerPrefs.GetInt("LV") == 5)
+        //{
+        //    // unlock spell_4
+        //    GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
+        //    GameObject.FindWithTag("Player").GetComponent<Player_Ability_4>().enabled = true;
+        //}
+        //if (PlayerPrefs.GetInt("LV") == 6)
+        //{
+        //    // unlock spell_5
+        //    GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
+        //    GameObject.FindWithTag("Player").GetComponent<Player_Ability_5>().enabled = true;
+        //}
+
         GameObject.Find("LevelUpText").GetComponent<Text>().enabled = true;
         GameObject.Find("AbUnlockText").GetComponent<Text>().enabled = true;
 
         Invoke("DismissLevelUpInfo", 5f);
         Invoke("DismissAbilityUnlockInfo", 5f);
+
     }
 
 
