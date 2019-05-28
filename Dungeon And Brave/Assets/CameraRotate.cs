@@ -7,17 +7,19 @@ public class CameraRotate : MonoBehaviour
     public float rotateSpeed = 100;       //设置旋转的速度
     public Transform PlayerTrans;       //设置空物体的位置
     GameObject player;
+    PlayerHealth playerHealth;
     float dis;
 
     void Start()
     {
-       player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
         dis = Vector3.Distance(player.transform.position, transform.position);
     }
 
     void Update()
     { 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) && playerHealth.currentHealth > 0)
         {
             float nor = Input.GetAxis("Mouse X");//获取鼠标的偏移量
             //public void RotateAround(Vector3 point, Vector3 axis, float angle);

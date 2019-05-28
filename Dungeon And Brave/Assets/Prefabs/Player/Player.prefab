@@ -193,10 +193,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 60
-  m_Height: 0
+  m_Radius: 24.047995
+  m_Height: 90.480736
   m_Direction: 1
-  m_Center: {x: 0, y: 65, z: 0}
+  m_Center: {x: -0.92577934, y: 50.24036, z: -0}
 --- !u!54 &3009933606373876849
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8837be178854e406486399db6b668587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  movementSpeed: 6
 --- !u!114 &3009933606373876861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +240,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
-  healthSlider: {fileID: 0}
 --- !u!114 &3009933606373876860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +254,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attact: {fileID: 1671790395368204686, guid: 3d5d2de60a39648edaa732bda1ec2e16, type: 3}
   spellPos: {fileID: 3009933604803901634}
-  attactGap: 2
+  attackGap: 1
+  level: 1
+  curEXP: 1
+  constantOFlevel: 1
 --- !u!114 &3009933606373876863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingMagic: 100
   currentMagic: 0
-  magicSlider: {fileID: 0}
 --- !u!114 &3009933606373876862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +279,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3009933606373876855}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4372a3623229472d8eb410a882eee38, type: 3}
   m_Name: 
@@ -286,6 +287,7 @@ MonoBehaviour:
   ability: {fileID: 100012, guid: 8a0f430330316eb44a7a9a968f98aefc, type: 3}
   spellPos: {fileID: 3009933604803901634}
   magicCost: 10
+  key: 1
   abilityGap: 2
 --- !u!1001 &217596126
 PrefabInstance:
@@ -354,31 +356,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3920523356847479168, guid: 3c481e8356ca6480f82367a9a3f4b4a6,
+    - target: {fileID: 3920523356847479175, guid: 3c481e8356ca6480f82367a9a3f4b4a6,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3920523356847479168, guid: 3c481e8356ca6480f82367a9a3f4b4a6,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3920523356847479168, guid: 3c481e8356ca6480f82367a9a3f4b4a6,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3920523356847479175, guid: 3c481e8356ca6480f82367a9a3f4b4a6,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 3009933606373876854}
-    - target: {fileID: 3920523356847479175, guid: 3c481e8356ca6480f82367a9a3f4b4a6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c481e8356ca6480f82367a9a3f4b4a6, type: 3}
 --- !u!4 &3920523357048297822 stripped
@@ -399,14 +386,6 @@ PrefabInstance:
       value: Mori
       objectReference: {fileID: 0}
     - target: {fileID: 100120, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100122, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100206, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
@@ -650,6 +629,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100122, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 100124, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -811,6 +794,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100204, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100206, guid: 4d2f8ad8ea75d4f77ba51c458d12d933, type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}

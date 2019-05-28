@@ -44,6 +44,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+
         // If the enemy is dead...
         if (isDead)
         {
@@ -53,9 +54,8 @@ public class EnemyHealth : MonoBehaviour
 
 
         // Reduce the current health by the amount of damage sustained.
-        Debug.Log(currentHealth);
         currentHealth -= amount;
-
+        Debug.Log(amount);
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)
         {

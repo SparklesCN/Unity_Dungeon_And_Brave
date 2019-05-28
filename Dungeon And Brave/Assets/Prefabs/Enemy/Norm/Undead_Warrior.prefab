@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 173225071}
   - component: {fileID: 173225072}
   - component: {fileID: 173225073}
+  - component: {fileID: 2345266951615087739}
   m_Layer: 0
   m_Name: Undead_Warrior
   m_TagString: Enemy
@@ -539,10 +540,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.9844284
+  m_Radius: 0.44510454
   m_Height: 2.8468523
   m_Direction: 1
-  m_Center: {x: 0, y: 0.92342615, z: -0.630188}
+  m_Center: {x: -0.0608567, y: 0.92342615, z: -0.045366466}
 --- !u!114 &173225067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,8 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b37c197ed19c48558c84bcc1d1be185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 2
-  attackDamage: 10
+  timeBetweenAttacks: 0.25
+  attackDamage: 2
 --- !u!114 &173225071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,7 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistanceWithPlay: 2
-  rangeToSee: 6
+  rangeToSee: 10
   ableToAttack: 0
   isNaving: 1
   habitat: 10
@@ -613,6 +614,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!54 &2345266951615087739
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504612359777172541}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &7504612359777174131
 GameObject:
   m_ObjectHideFlags: 0

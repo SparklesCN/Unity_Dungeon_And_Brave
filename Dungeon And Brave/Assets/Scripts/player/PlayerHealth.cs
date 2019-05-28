@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 100;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
-    public Slider healthSlider;                                 // Reference to the UI's health bar.
+    Slider healthSlider;                                 // Reference to the UI's health bar.
 
     Animator anim;                                              // Reference to the Animator component.
     PlayerMovement playerMovement;                              // Reference to the player's movement.
@@ -17,11 +17,13 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake()
     {
+        healthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
+
         // Setting up the references.
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
         // Set the initial health of the player.
-        currentHealth = startingHealth;
+        currentHealth = PlayerPrefs.GetInt("HP");
         healthSlider.value = currentHealth;
     }
 
