@@ -17931,6 +17931,7 @@ Transform:
   - {fileID: 1378941632}
   - {fileID: 1910537016}
   - {fileID: 1347819749}
+  - {fileID: 1490660302}
   - {fileID: 1287953393}
   - {fileID: 2142083625}
   - {fileID: 1920282010}
@@ -17949,7 +17950,6 @@ Transform:
   - {fileID: 1996471043}
   - {fileID: 714953435}
   - {fileID: 2055897436}
-  - {fileID: 1490660302}
   - {fileID: 1664709753}
   - {fileID: 80601864}
   m_Father: {fileID: 17590918}
@@ -78059,7 +78059,7 @@ Transform:
   - {fileID: 63491727}
   - {fileID: 407876979}
   m_Father: {fileID: 408798285}
-  m_RootOrder: 348
+  m_RootOrder: 330
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1491746959 stripped
 GameObject:
@@ -105035,6 +105035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1931760242}
   - component: {fileID: 1931760243}
+  - component: {fileID: 1931760244}
   m_Layer: 0
   m_Name: PortCollider
   m_TagString: Untagged
@@ -105069,6 +105070,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.0390234, y: 1, z: 2.827755}
   m_Center: {x: -0.031799316, y: 0, z: -0.091259}
+--- !u!114 &1931760244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931760241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e693d2fc6eb14409bfdba0534640334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1932199932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 125232, guid: 5df4398968a81e04dadfc73e32ca7f79,
