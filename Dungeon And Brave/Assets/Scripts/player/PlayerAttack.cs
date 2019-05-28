@@ -15,8 +15,8 @@ public class PlayerAttack : MonoBehaviour
     Animator anim;
     float target = 280;
 
-    int level = 1;
-    int curEXP = 1;
+    public int level = 1;
+    public int curEXP = 1;
     public int constantOFlevel = 1;
     //source:https://www.diablowiki.net/Experience_level_chart
     IList<int> expList = new List<int> {280, 2700, 4500, 6600, 9000, 11700, 14000, 16500, 19200};
