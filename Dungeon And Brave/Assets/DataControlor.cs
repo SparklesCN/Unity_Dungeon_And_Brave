@@ -4,36 +4,12 @@ using UnityEngine;
 
 public class DataControlor : MonoBehaviour
 {
-    public static DataControlor Instance;
-    public GameObject player;
-
-    public int HP, MP, LV, EXP, SceneNum;
-    private void Awake()
-    {
-        // Instance mode
-        if (Instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
-        }
-        else if (Instance != null)
-        {
-            Destroy(gameObject);
-        }
-    }
-
     private void Start()
     {
-        player = GameObject.FindWithTag("Player");
-    }
-
-    public void saveData()
-    {
-        DataControlor.Instance.SceneNum = SceneNum;
-        DataControlor.Instance.HP = player.GetComponent<PlayerHealth>().currentHealth;
-        DataControlor.Instance.MP = player.GetComponent<PlayerMagic>().currentMagic;
-        DataControlor.Instance.LV = player.GetComponent<PlayerAttack>().level;
-        DataControlor.Instance.EXP = player.GetComponent<PlayerAttack>().curEXP;
-
+        PlayerPrefs.SetInt("HP", 100);
+        PlayerPrefs.SetInt("MP", 100);
+        PlayerPrefs.SetInt("EXP", 0);
+        PlayerPrefs.SetInt("LV", 1);
+        PlayerPrefs.SetInt("SceneNum", 1);
     }
 }

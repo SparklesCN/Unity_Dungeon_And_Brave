@@ -7,12 +7,14 @@ public class PlayerMagic : MonoBehaviour
 {
     public int startingMagic = 100;            // The amount of health the enemy starts the game with.
     public int currentMagic;                   // The current health the enemy has.
-    public Slider magicSlider;
+    Slider magicSlider;
 
     void Awake()
     {
+        magicSlider = GameObject.Find("MagicSlider").GetComponent<Slider>();
+
         // Setting the current health when the enemy first spawns.
-        currentMagic = startingMagic;
+        currentMagic = PlayerPrefs.GetInt("MP");
         magicSlider.value = currentMagic;
     }
 

@@ -20,16 +20,21 @@ public class PlayerAttack : MonoBehaviour
     public int constantOFlevel = 1;
     //source:https://www.diablowiki.net/Experience_level_chart
     IList<int> expList = new List<int> {280, 2700, 4500, 6600, 9000, 11700, 14000, 16500, 19200};
-
+    PlayerHealth playerHealth;
 
     private void Start()
     {
+        curEXP = PlayerPrefs.GetInt("EXP");
+        level = PlayerPrefs.GetInt("LV");
+
         Invoke("DismissTutorialInfo", 5f);
         target = expList[level - 1];
         anim = GetComponent<Animator>();
         levelSlider = GameObject.Find("LevelSlider").GetComponent<Slider>();
         expText = GameObject.Find("ExpText").GetComponent<Text>();
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
+        playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
+
     }
 
     // Update is called once per frame
@@ -47,7 +52,7 @@ public class PlayerAttack : MonoBehaviour
         myTime += Time.deltaTime;
         bool isFire = Input.GetButton("Fire1") && myTime > attackGap;
 
-        if (isFire)
+        if (isFire && playerHealth.currentHealth > 0)
         {
             //Instantiate(Object original, Vector3 position, Quaternion rotation)
             GameObject copy_attact = Instantiate(attact, spellPos.position, spellPos.rotation) as GameObject;
@@ -83,6 +88,8 @@ public class PlayerAttack : MonoBehaviour
         Invoke("DismissLevelUpInfo", 5f);
         Invoke("DismissAbilityUnlockInfo", 5f);
     }
+
+
     void DismissTutorialInfo()
     {
         GameObject.Find("TutorialText").GetComponent<Text>().enabled = false;
