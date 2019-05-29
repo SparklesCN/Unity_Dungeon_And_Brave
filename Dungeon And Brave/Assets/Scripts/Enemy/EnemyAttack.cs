@@ -60,7 +60,6 @@ public class EnemyAttack : MonoBehaviour
     {
         // Reset the timer.
         timer = 0f;
-        Debug.Log("!!!!!!");
         // play attack anim is move to enemyMovement 
         if(isAC)
         {

@@ -35161,6 +35161,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 8153ff91c8b7c6c4ca02b27c13ec43df, type: 3}
+--- !u!1 &879306343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5237788126484477871, guid: 7c044c0eb81a94d94b4e3cb4dade8c33,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538566441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &879306344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879306343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb597c7c86094beea2becbb1891c578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &880283776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 117188, guid: 2f502f470bc99cf40a5d520810ab13c3,
@@ -61398,7 +61416,7 @@ PrefabInstance:
     - target: {fileID: 5237788126484477871, guid: 7c044c0eb81a94d94b4e3cb4dade8c33,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5237788126484245391, guid: 7c044c0eb81a94d94b4e3cb4dade8c33,
         type: 3}
@@ -61464,6 +61482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeBetweenAttacks
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237788126477643317, guid: 7c044c0eb81a94d94b4e3cb4dade8c33,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c044c0eb81a94d94b4e3cb4dade8c33, type: 3}
@@ -84664,6 +84687,16 @@ PrefabInstance:
     - target: {fileID: 4842632764990863920, guid: a23ad21e684c547928d4eb4d53450d8f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842632764942583149, guid: a23ad21e684c547928d4eb4d53450d8f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842632764942583149, guid: a23ad21e684c547928d4eb4d53450d8f,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

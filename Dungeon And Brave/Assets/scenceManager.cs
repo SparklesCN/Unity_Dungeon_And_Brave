@@ -24,7 +24,6 @@ public class scenceManager : MonoBehaviour
             PlayerPrefs.SetInt("LV", player.GetComponent<PlayerAttack>().level);
             PlayerPrefs.SetInt("EXP", player.GetComponent<PlayerAttack>().curEXP);
 
-            Debug.Log("SceneNum is " + PlayerPrefs.GetInt("SceneNum"));
             SceneManager.LoadSceneAsync(Scenes[PlayerPrefs.GetInt("SceneNum") - 1]);
         }
     }
