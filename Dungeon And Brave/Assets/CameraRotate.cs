@@ -22,9 +22,7 @@ public class CameraRotate : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(transform.position);
         Vector3 pos = constentVector + player.transform.position;
-        Debug.Log(pos);
 
         if (Input.GetMouseButton(1) && playerHealth.currentHealth > 0)
         {
