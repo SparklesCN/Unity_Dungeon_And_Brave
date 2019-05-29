@@ -9,21 +9,16 @@ public class CameraRotate : MonoBehaviour
     GameObject player;
     PlayerHealth playerHealth;
     float dis;
-    Vector3 constentVector;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
         dis = Vector3.Distance(player.transform.position, transform.position);
-        transform.localPosition = new Vector3(0, 200, -260);
-        constentVector = transform.position - player.transform.position;
     }
 
     void Update()
     {
-        Vector3 pos = constentVector + player.transform.position;
-
         if (Input.GetMouseButton(1) && playerHealth.currentHealth > 0)
         {
             float nor = Input.GetAxis("Mouse X");//获取鼠标的偏移量
@@ -39,7 +34,7 @@ public class CameraRotate : MonoBehaviour
         //Debug.Log(transform.localPosition);
 
         // if the ray from player to camera, hit something
-        if (Physics.Linecast(pos, player_position, out hit))
+        if (Physics.Linecast(transform.position, player_position, out hit))
         {
             //Debug.Log(hit.point);
             //Debug.Log(hit.collider.gameObject.layer);
@@ -62,5 +57,4 @@ public class CameraRotate : MonoBehaviour
         }
 
     }
-
 }

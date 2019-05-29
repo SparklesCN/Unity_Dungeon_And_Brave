@@ -27,7 +27,6 @@ public class PlayerAttack : MonoBehaviour
         curEXP = PlayerPrefs.GetInt("EXP");
         level = PlayerPrefs.GetInt("LV");
 
-        Invoke("DismissTutorialInfo", 5f);
         target = expList[level - 1];
         anim = GetComponent<Animator>();
         levelSlider = GameObject.Find("LevelSlider").GetComponent<Slider>();
@@ -116,27 +115,6 @@ public class PlayerAttack : MonoBehaviour
         //    GameObject.FindWithTag("Player").GetComponent<Player_Ability_5>().enabled = true;
         //}
 
-        GameObject.Find("LevelUpText").GetComponent<Text>().enabled = true;
-        GameObject.Find("AbUnlockText").GetComponent<Text>().enabled = true;
-
-        Invoke("DismissLevelUpInfo", 5f);
-        Invoke("DismissAbilityUnlockInfo", 5f);
-
-    }
-
-
-    void DismissTutorialInfo()
-    {
-        GameObject.Find("TutorialText").GetComponent<Text>().enabled = false;
-    }
-    void DismissLevelUpInfo()
-    {
-        GameObject.Find("LevelUpText").GetComponent<Text>().enabled = false;
-    }
-
-    void DismissAbilityUnlockInfo()
-    {
-        GameObject.Find("AbUnlockText").GetComponent<Text>().enabled = false;
     }
 
 }
