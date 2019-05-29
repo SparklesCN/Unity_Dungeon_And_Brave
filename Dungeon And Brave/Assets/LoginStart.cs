@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LoginStart : MonoBehaviour
 {
@@ -14,6 +15,6 @@ public class LoginStart : MonoBehaviour
 
     private void OnClick()
     {
-        Debug.Log("Clicked! Start!");
+        SceneManager.LoadSceneAsync("map");
     }
 }
