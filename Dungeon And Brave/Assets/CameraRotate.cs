@@ -7,17 +7,25 @@ public class CameraRotate : MonoBehaviour
     public float rotateSpeed = 100;       //设置旋转的速度
     public Transform PlayerTrans;       //设置空物体的位置
     GameObject player;
+    PlayerHealth playerHealth;
     float dis;
+    Vector3 constentVector;
 
     void Start()
     {
-       player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
         dis = Vector3.Distance(player.transform.position, transform.position);
+        transform.localPosition = new Vector3(0, 200, -260);
+        constentVector = transform.position - player.transform.position;
     }
 
     void Update()
-    { 
-        if (Input.GetMouseButton(1))
+    {
+        Debug.Log(transform.position);
+        Vector3 pos = constentVector + player.transform.position;
+        Debug.Log(pos);
+        if (Input.GetMouseButton(1) && playerHealth.currentHealth > 0)
         {
             float nor = Input.GetAxis("Mouse X");//获取鼠标的偏移量
             //public void RotateAround(Vector3 point, Vector3 axis, float angle);
@@ -32,7 +40,7 @@ public class CameraRotate : MonoBehaviour
         //Debug.Log(transform.localPosition);
 
         // if the ray from player to camera, hit something
-        if (Physics.Linecast(transform.position, player_position, out hit))
+        if (Physics.Linecast(pos, player_position, out hit))
         {
             //Debug.Log(hit.point);
             //Debug.Log(hit.collider.gameObject.layer);
