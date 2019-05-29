@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Camera
   - Tutorial
+  - CameraInitial
   layers:
   - Default
   - TransparentFX
