@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
-    public float speed = 5f;
+    public float speed = 50f;
     public float moveSpeed = 10f;
 
 
@@ -18,26 +18,31 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // new position
         Vector3 pos = target.position - constant;
         // smoothly change to new position
-        transform.position = Vector3.Lerp(transform.position, pos, speed * Time.deltaTime);
-        Debug.Log("hit");
+        //transform.position = Vector3.Lerp(transform.position, pos, speed * Time.deltaTime);
+
         RaycastHit hit;
         // if the ray from player to camera, hit something
-        if (Physics.Linecast(target.position + Vector3.up, transform.position, out hit))
+        if (Physics.Linecast(target.position + Vector3.up, pos, out hit))
         {
             //check if object that we hit has object
             //string tag = hit.collider.gameObject.tag;
             //if (tag == "Camera")
             //{
-                //move camera foward
-                Debug.Log("hit");
-                transform.position = hit.point;
-            //} 
+            //move camera foward
+            Debug.Log("hit");
+            transform.position = hit.point;
+            //transform.position = Vector3.Lerp(transform.position, hit.point, speed * Time.deltaTime);
 
+            //} 
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, pos, speed * Time.deltaTime);
         }
 
     }
