@@ -21,14 +21,11 @@ public class CameraRotate : MonoBehaviour
     }
 
     void Update()
-<<<<<<< HEAD
     {
         Debug.Log(transform.position);
         Vector3 pos = constentVector + player.transform.position;
         Debug.Log(pos);
-=======
-    { 
->>>>>>> 5a3eaad036e122775402f175171bd85e65f3a7ba
+
         if (Input.GetMouseButton(1) && playerHealth.currentHealth > 0)
         {
             float nor = Input.GetAxis("Mouse X");//获取鼠标的偏移量
