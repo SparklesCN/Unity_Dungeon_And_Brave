@@ -85,31 +85,31 @@ public class PlayerAttack : MonoBehaviour
 
     void UnlockSpell()
     {
-        if (PlayerPrefs.GetInt("LV") == 2)
+        if (level == 2)
         {
             // unlock spell_1
             GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
             GameObject.FindWithTag("Player").GetComponent<Player_Ability_1>().enabled = true;
         }
-        //if (PlayerPrefs.GetInt("LV") == 3)
+        //if (level == 3)
         //{
         //    // unlock spell_2
         //    GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
         //    GameObject.FindWithTag("Player").GetComponent<Player_Ability_2>().enabled = true;
         //}
-        //if (PlayerPrefs.GetInt("LV") == 4)
+        //if (level == 4)
         //{
         //    // unlock spell_3
         //    GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
         //    GameObject.FindWithTag("Player").GetComponent<Player_Ability_3>().enabled = true;
         //}
-        //if (PlayerPrefs.GetInt("LV") == 5)
+        //if (level == 5)
         //{
         //    // unlock spell_4
         //    GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
         //    GameObject.FindWithTag("Player").GetComponent<Player_Ability_4>().enabled = true;
         //}
-        //if (PlayerPrefs.GetInt("LV") == 6)
+        //if (level == 6)
         //{
         //    // unlock spell_5
         //    GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
