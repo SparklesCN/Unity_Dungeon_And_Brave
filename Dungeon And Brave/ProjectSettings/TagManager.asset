@@ -8,6 +8,7 @@ TagManager:
   - SpellPos
   - Enemy
   - Camera
+  - Tutorial
   layers:
   - Default
   - TransparentFX
