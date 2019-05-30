@@ -94,12 +94,12 @@ public class PlayerAttack : MonoBehaviour
             GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
             GameObject.FindWithTag("Player").GetComponent<Player_Ability_1>().enabled = true;
         }
-        //if (level == 3)
-        //{
-        //    // unlock spell_2
-        //    GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
-        //    GameObject.FindWithTag("Player").GetComponent<Player_Ability_2>().enabled = true;
-        //}
+        if (level == 3)
+        {
+            // unlock spell_2
+            GameObject.Find("Ability_2/lock").GetComponent<Image>().enabled = false;
+            GameObject.FindWithTag("Player").GetComponent<Player_Ability_2>().enabled = true;
+        }
         //if (level == 4)
         //{
         //    // unlock spell_3
