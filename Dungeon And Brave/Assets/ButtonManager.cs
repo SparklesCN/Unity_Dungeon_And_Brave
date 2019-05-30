@@ -39,7 +39,7 @@ public class ButtonManager : MonoBehaviour
     private void OnClickStart()
     {
         Debug.Log("Clicked! Start!");
-        SceneManager.LoadSceneAsync("map3");
+        SceneManager.LoadSceneAsync("map");
     }
     private void OnClickTutorial()
     {
