@@ -9132,7 +9132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 812293108}
-  m_RootOrder: 211
+  m_RootOrder: 178
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &251176979
 MeshCollider:
@@ -15159,7 +15159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460440, guid: 3bef878497e431146b5c4c64d4f738cd, type: 3}
       propertyPath: m_RootOrder
-      value: 68
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 460440, guid: 3bef878497e431146b5c4c64d4f738cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -32587,6 +32587,7 @@ Transform:
   - {fileID: 442375646}
   - {fileID: 191035348}
   - {fileID: 1479515196}
+  - {fileID: 1981712788}
   - {fileID: 609276559}
   - {fileID: 1171053114}
   - {fileID: 365691495}
@@ -32622,6 +32623,7 @@ Transform:
   - {fileID: 709000010}
   - {fileID: 2100612696}
   - {fileID: 490774987}
+  - {fileID: 251176978}
   - {fileID: 1717079681}
   - {fileID: 753138008}
   - {fileID: 201502850}
@@ -32630,7 +32632,6 @@ Transform:
   - {fileID: 1458772510}
   - {fileID: 574933390}
   - {fileID: 235399775}
-  - {fileID: 1981712788}
   - {fileID: 1878686364}
   - {fileID: 840584982}
   - {fileID: 1869057391}
@@ -32656,7 +32657,6 @@ Transform:
   - {fileID: 1132526261}
   - {fileID: 602132559}
   - {fileID: 1081204321}
-  - {fileID: 251176978}
   - {fileID: 557356268}
   - {fileID: 2000017761}
   - {fileID: 778353735}
@@ -77561,7 +77561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460440, guid: 3bef878497e431146b5c4c64d4f738cd, type: 3}
       propertyPath: m_RootOrder
-      value: 69
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 460440, guid: 3bef878497e431146b5c4c64d4f738cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -80111,7 +80111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 812293108}
-  m_RootOrder: 185
+  m_RootOrder: 142
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1981712789
 MeshCollider:
@@ -87693,6 +87693,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AbilitySystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309516779920775389, guid: 9b229487df85b48af9556c737ad026dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8177908102003599884, guid: 9b229487df85b48af9556c737ad026dc,
         type: 3}
