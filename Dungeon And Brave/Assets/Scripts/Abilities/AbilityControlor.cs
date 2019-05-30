@@ -15,12 +15,12 @@ public class AbilityControlor : MonoBehaviour
             GameObject.FindWithTag("Player").GetComponent<Player_Ability_1>().enabled = true;
             GameObject.Find("Ability_1/lock").GetComponent<Image>().enabled = false;
         }
-        //if (level > 2)
-        //{
-        //    // unlock spell_2
-        //    GameObject.FindWithTag("Player").GetComponent<Ability_2>().enabled = true;
-        //    GameObject.Find("Ability_2/lock").GetComponent<Image>().enabled = false;
-        //}
+        if (level > 2)
+        {
+            // unlock spell_2
+            GameObject.FindWithTag("Player").GetComponent<Player_Ability_2>().enabled = true;
+            GameObject.Find("Ability_2/lock").GetComponent<Image>().enabled = false;
+        }
         //if (level > 3)
         //{
         //    // unlock spell_3

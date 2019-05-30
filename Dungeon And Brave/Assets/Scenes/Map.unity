@@ -61953,16 +61953,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5237788126615929209, guid: 7c044c0eb81a94d94b4e3cb4dade8c33,
-        type: 3}
-      propertyPath: startingHealth
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5237788126615929214, guid: 7c044c0eb81a94d94b4e3cb4dade8c33,
-        type: 3}
-      propertyPath: timeBetweenAttacks
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5237788126477643317, guid: 7c044c0eb81a94d94b4e3cb4dade8c33,
         type: 3}
       propertyPath: m_Enabled
@@ -75633,6 +75623,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: CameraInitial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246338206162102367, guid: 61625a31f5d1f4779aa6780ce0191931,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246338206147129663, guid: 61625a31f5d1f4779aa6780ce0191931,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246338206147129663, guid: 61625a31f5d1f4779aa6780ce0191931,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.10449336
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246338206147129663, guid: 61625a31f5d1f4779aa6780ce0191931,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.09625311
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61625a31f5d1f4779aa6780ce0191931, type: 3}
