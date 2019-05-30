@@ -8,16 +8,22 @@ public class Player_Ability_2 : MonoBehaviour
     public string key = "2";
     float myTime = 0f;
     public float abilityGap = 1f;
-    ParticleSystem healParticle;
+    ParticleSystem healParticle, particlePart1, particlePart2, particlePart3;
     public int healAmount = 40;
     PlayerHealth playerHealth;
     Animator anim;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         healParticle = GameObject.Find("Ab2").GetComponent<ParticleSystem>();
+        particlePart1 = GameObject.Find("Ab2/Circle_Light").GetComponent<ParticleSystem>();
+        particlePart2 = GameObject.Find("Ab2/Silk").GetComponent<ParticleSystem>();
+        particlePart3 = GameObject.Find("Ab2/Spark1").GetComponent<ParticleSystem>();
         healParticle.Stop();
+        particlePart1.Stop();
+        particlePart2.Stop();
+        particlePart3.Stop();
         playerHealth = this.GetComponent<PlayerHealth>();
         anim = GetComponent<Animator>();
     }
@@ -39,13 +45,17 @@ public class Player_Ability_2 : MonoBehaviour
             if (GetComponent<PlayerMagic>().TakeMagic(magicCost))
             {
                 healParticle.Play();
+                particlePart1.Play();
+                particlePart2.Play();
+                particlePart3.Play();
+
                 if (playerHealth.currentHealth >= 70)
                 {
                     playerHealth.currentHealth = 100;
                 }
                 else
                 {
-                    playerHealth.currentHealth += 30;
+                    playerHealth.currentHealth += healAmount;
                 }
                 
             }

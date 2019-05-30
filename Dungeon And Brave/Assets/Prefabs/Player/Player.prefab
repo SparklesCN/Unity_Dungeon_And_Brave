@@ -300,12 +300,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3009933606373876855}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a12b6acf65b6efc4ba26d2c9e85eba62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 40
+  magicCost: 10
+  key: 2
+  abilityGap: 5
+  healAmount: 30
 --- !u!1 &4989235162825939194
 GameObject:
   m_ObjectHideFlags: 0

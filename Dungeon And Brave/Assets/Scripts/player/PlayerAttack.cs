@@ -23,6 +23,12 @@ public class PlayerAttack : MonoBehaviour
     IList<int> expList = new List<int> {280, 2700, 4500, 6600, 9000, 11700, 14000, 16500, 19200};
     PlayerHealth playerHealth;
 
+    private void Awake()
+    {
+        levelUpParticle = GameObject.Find("LevelUp").GetComponent<ParticleSystem>();
+        levelUpParticle.Stop();
+    }
+
     private void Start()
     {
         curEXP = PlayerPrefs.GetInt("EXP");
@@ -35,8 +41,7 @@ public class PlayerAttack : MonoBehaviour
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
         playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
 
-        levelUpParticle = GameObject.Find("LevelUp").GetComponent<ParticleSystem>();
-        levelUpParticle.Stop();
+        
     }
 
     // Update is called once per frame
