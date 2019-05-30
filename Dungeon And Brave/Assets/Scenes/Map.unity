@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17150,6 +17150,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 467220, guid: e73dff4b52d607f4ca11b85eca8f146b,
     type: 3}
   m_PrefabInstance: {fileID: 399339043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &400844984 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3009933606373876854, guid: 61625a31f5d1f4779aa6780ce0191931,
+    type: 3}
+  m_PrefabInstance: {fileID: 1886122444}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &400956568
 PrefabInstance:
@@ -47467,10 +47473,6 @@ PrefabInstance:
       propertyPath: attackDamage
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 173225071, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
-      propertyPath: enemyEXP
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 173225072, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: habitat
       value: 10
@@ -47478,6 +47480,10 @@ PrefabInstance:
     - target: {fileID: 173225072, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: stopDistanceWithPlay
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 173225071, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
+      propertyPath: enemyEXP
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
@@ -74955,6 +74961,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 400844984}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61625a31f5d1f4779aa6780ce0191931, type: 3}
 --- !u!1 &1886457870 stripped
