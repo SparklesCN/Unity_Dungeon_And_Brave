@@ -139,8 +139,11 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
+                //Debug.Log(Vector3.Distance(curPos, player.position));
+                // at the edge of it's habitat
                 if (Vector3.Distance(curPos, player.position) > rangeToSee)
                 {   //can't see player
+                    Debug.Log("goback");
                     nav.enabled = true;
                     ableToAttack = false;
                     nav.SetDestination(startingPoint);
@@ -159,42 +162,72 @@ public class EnemyMovement : MonoBehaviour
                         anim.Play("walk");
                     }
                 }
-                else
+                else if (Vector3.Distance(curPos, player.position) < stopDistanceWithPlay)
                 {
+
+
+                    Debug.Log("attact");
                     nav.enabled = false;
-                    ableToAttack = false;
+                    ableToAttack = true;
                     if (isAC)
                     {
                         // this enemy have AC;
                         // plz set bool and triger
-                        ac.SetBool("isRun", false);
+                        ac.SetBool("isAttack", true);
 
                     }
                     else
                     {
                         // this enemy only Animation
                         // plz switch between Anims
-                        anim.Play("Idle");
+                        anim.Play("Attack");
                     }
                 }
+                else
+                {
+                Debug.Log("Wait");
+                //wait
+                nav.enabled = false;
+                ableToAttack = false;
+
+                if (isAC)
+                {
+                    // this enemy have AC;
+                    // plz set bool and triger
+                    ac.SetBool("isRun", false);
+                    ac.SetBool("isAttack", false);
+                }
+                else
+                {
+                    // this enemy only Animation
+                    // plz switch between Anims
+                    anim.Play("Idle");
+                }
+                }
+             
 
             }
         }
-    //    if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && Vector3.Distance(GetComponent<Transform>().position, player.position) > stopDistanceWithPlay)
-    //    {
+        else
+        {
+            nav.enabled = false;
+            ableToAttack = false;
+        }
+        //    if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && Vector3.Distance(GetComponent<Transform>().position, player.position) > stopDistanceWithPlay)
+        //    {
 
-    //        nav.enabled = true;
-    //        isNaving = true;
-    //        // ... set the destination of the nav mesh agent to the player.
-    //        nav.SetDestination(player.position);
-    //    }
-    //    // Otherwise...
-    //    else
-    //    {
-    //        // ... disable the nav mesh agent.
-    //        nav.enabled = false;
-    //        isNaving = false;
-    //    }
+        //        nav.enabled = true;
+        //        isNaving = true;
+        //        // ... set the destination of the nav mesh agent to the player.
+        //        nav.SetDestination(player.position);
+        //    }
+        //    // Otherwise...
+        //    else
+        //    {
+        //        // ... disable the nav mesh agent.
+        //        nav.enabled = false;
+        //        isNaving = false;
+        //    }
     }
 
 
