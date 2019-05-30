@@ -14,6 +14,7 @@ public class PlayerAttack : MonoBehaviour
     public float attackGap = 1f;
     Animator anim;
     float target = 280;
+    ParticleSystem levelUpParticle;
 
     public int level = 1;
     public int curEXP = 1;
@@ -34,6 +35,8 @@ public class PlayerAttack : MonoBehaviour
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
         playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
 
+        levelUpParticle = GameObject.Find("LevelUp").GetComponent<ParticleSystem>();
+        levelUpParticle.Stop();
     }
 
     // Update is called once per frame
@@ -78,6 +81,7 @@ public class PlayerAttack : MonoBehaviour
         constantOFlevel = (int)(constantOFlevel * 1.2f);
         target = expList[level - 1];
 
+        levelUpParticle.Play();
         UnlockSpell();
 
     }

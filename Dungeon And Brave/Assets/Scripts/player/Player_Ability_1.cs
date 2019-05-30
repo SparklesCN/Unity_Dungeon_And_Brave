@@ -29,9 +29,12 @@ public class Player_Ability_1 : MonoBehaviour
 
         if (isFire)
         {
-            GetComponent<PlayerMagic>().TakeMagic(magicCost);
             myTime = 0f;
-            GameObject copy_attact = Instantiate(ability, spellPos.position, spellPos.rotation) as GameObject;
+            if (GetComponent<PlayerMagic>().TakeMagic(magicCost))
+            {
+                GameObject copy_attact = Instantiate(ability, spellPos.position, spellPos.rotation) as GameObject;
+            }
+            
         }
         anim.SetBool("isAbility", isFire);
     }

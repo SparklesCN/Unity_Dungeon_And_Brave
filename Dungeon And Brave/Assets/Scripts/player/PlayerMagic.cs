@@ -8,6 +8,7 @@ public class PlayerMagic : MonoBehaviour
     public int startingMagic = 100;            // The amount of health the enemy starts the game with.
     public int currentMagic;                   // The current health the enemy has.
     Slider magicSlider;
+    float recoveryMagicRate;
 
     void Awake()
     {
@@ -25,12 +26,29 @@ public class PlayerMagic : MonoBehaviour
         //{
         //    currentMagic = 100;
         //}
+
+        if (recoveryMagicRate >= 5)
+        {
+            RecoveryMagic();
+            recoveryMagicRate = 0;
+        }
+        recoveryMagicRate += Time.deltaTime;
     }
 
-
-    public void TakeMagic(int amount)
+    private void RecoveryMagic()
     {
-        // Reduce the current health by the amount of damage sustained.
-        currentMagic -= amount;
+        if (currentMagic <= 90)
+        {
+            currentMagic += 10;
+        }
+    }
+    public bool TakeMagic(int amount)
+    {
+        if (currentMagic >= amount)
+        {
+            currentMagic -= amount;
+            return true;
+        }
+        return false; 
     }
 }
