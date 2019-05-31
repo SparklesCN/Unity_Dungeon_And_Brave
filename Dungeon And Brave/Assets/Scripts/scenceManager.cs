@@ -35,6 +35,9 @@ public class scenceManager : MonoBehaviour
             //SceneManager.LoadSceneAsync(Scenes[PlayerPrefs.GetInt("SceneNum") - 1]);
 
             loadingCanvas.enabled = true;
+
+            // TODO: play teleport sounds here;
+
             StartCoroutine(LoadingScene()); 
 
         }

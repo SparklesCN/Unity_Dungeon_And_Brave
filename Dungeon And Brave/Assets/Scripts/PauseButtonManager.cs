@@ -41,12 +41,15 @@ public class PauseButtonManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+
             OnClickPause();
         }
     }
 
     private void OnClickPause()
     {
+        // TODO: play button sounds here;
+
         Time.timeScale = 0;
 
         //enable all pause UI
@@ -66,11 +69,15 @@ public class PauseButtonManager : MonoBehaviour
 
     private void OnClickExit()
     {
+        // TODO: play button sounds here;
+
         Application.Quit();
     }
 
     private void OnClickResumption()
     {
+        // TODO: play button sounds here;
+
         Time.timeScale = 1;
 
         //disable all pause UI
