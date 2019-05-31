@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DataControlor : MonoBehaviour
 {
+    public int nextScene, formerScene;
     private void Start()
     {
         PlayerPrefs.SetInt("HP", 100);

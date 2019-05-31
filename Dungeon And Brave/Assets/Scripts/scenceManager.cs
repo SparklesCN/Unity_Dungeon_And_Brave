@@ -7,14 +7,15 @@ using UnityEngine.UI;
 public class scenceManager : MonoBehaviour
 {
     GameObject player;
+    DataControlor dataControlor;
     int currentProgress, targetProgress;
     Slider loadingSlider;
     Canvas loadingCanvas;
-    List<string> Scenes = new List<string>(new string[] { "Map1", "Map2", "Map3", "Map4", "Map5" });
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
+        dataControlor = GameObject.Find("DataControl").GetComponent<DataControlor>();
         currentProgress = 0;
         targetProgress = 0;
         loadingSlider = GameObject.Find("LoadingSlider").GetComponent<Slider>();
@@ -26,7 +27,6 @@ public class scenceManager : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            PlayerPrefs.SetInt("SceneNum", PlayerPrefs.GetInt("SceneNum")+1);
             PlayerPrefs.SetInt("HP", player.GetComponent<PlayerHealth>().currentHealth);
             PlayerPrefs.SetInt("MP", player.GetComponent<PlayerMagic>().currentMagic);
             PlayerPrefs.SetInt("LV", player.GetComponent<PlayerAttack>().level);
@@ -47,7 +47,7 @@ public class scenceManager : MonoBehaviour
     // Asynchronous loading
     private IEnumerator LoadingScene()
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SceneNum")); //load next map
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(dataControlor.nextScene); //load next map
         asyncOperation.allowSceneActivation = false;                          //Ban auto load after loading
         while (asyncOperation.progress < 0.9f)                                //when progress less than 0.9f
         {
