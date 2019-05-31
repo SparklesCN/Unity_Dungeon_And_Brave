@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.9
-  attackDamage: 2
+  attackDamage: 5
 --- !u!114 &173225071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   enemyEXP: 70
-  deathClip: {fileID: 8300000, guid: 39da34aac2ba24d41b99479506e4068b, type: 3}
+  deathClip: {fileID: 8300000, guid: e622085eb4f30487da2bedaf7ac98de6, type: 3}
 --- !u!114 &173225072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +594,7 @@ MonoBehaviour:
   ableToAttack: 0
   isNaving: 1
   habitat: 10
-  moveClip: {fileID: 8300000, guid: e56dd089dbfccf5468cc647e3a5aeb71, type: 3}
+  moveClip: {fileID: 8300000, guid: 49d6f40a251c84982b4bcdbb83a2eef5, type: 3}
 --- !u!195 &173225073
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -643,9 +643,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d503f2282f59d9f41986ba035b8a5781, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 710d40377a19948e1becd0d2ae5a6666, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0

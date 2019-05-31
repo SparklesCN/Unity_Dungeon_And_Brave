@@ -1,8 +1,9 @@
 ﻿// refer: Unity_Survival_Shooter Tutorial
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip deathClip;
     AudioClip hurtClip;
     AudioSource playerAudio;
-     
+
+    Canvas loadingCanvas;
+    Slider loadingSlider;
+    int currentProgress, targetProgress;
 
     void Awake()
     {
@@ -31,7 +35,12 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.value = currentHealth;
         playerAudio = GetComponent<AudioSource>();
         hurtClip = playerAudio.clip;
-        
+        currentProgress = 0;
+        targetProgress = 0;
+        loadingSlider = GameObject.Find("LoadingSlider").GetComponent<Slider>();
+        loadingCanvas = GameObject.Find("LoadingCanvas").GetComponent<Canvas>();
+
+
     }
 
     void Update()
@@ -81,6 +90,33 @@ public class PlayerHealth : MonoBehaviour
         //play death audio
         playerAudio.clip = deathClip;
         playerAudio.Play();
+        loadingCanvas.enabled = true;
+        StartCoroutine(LoadingScene());
+
+    }
+
+    private IEnumerator LoadingScene()
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SceneNum")); //load next map
+        asyncOperation.allowSceneActivation = false;                          //Ban auto load after loading
+        while (asyncOperation.progress < 0.9f)                                //when progress less than 0.9f
+        {
+            targetProgress = (int)(asyncOperation.progress * 100); //when progress in allowSceneActivation= false，will stuck on 0.89999，time 100 to get int
+            yield return LoadProgress();
+        }
+        targetProgress = 100;
+        yield return LoadProgress();
+        asyncOperation.allowSceneActivation = true;
+    }
+
+    private IEnumerator<WaitForEndOfFrame> LoadProgress()
+    {
+        while (currentProgress < targetProgress)
+        {
+            ++currentProgress;
+            loadingSlider.value = (float)currentProgress / 100;
+            yield return new WaitForEndOfFrame();
+        }
     }
 
 }

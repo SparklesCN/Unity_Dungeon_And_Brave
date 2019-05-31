@@ -45,13 +45,11 @@ public class ButtonManager : MonoBehaviour
     }
     private void OnClickStart()
     {
-        Debug.Log("Clicked! Start!");
         loadingCanvas.enabled = true;
         StartCoroutine(LoadingScene());
     }
     private void OnClickTutorial()
     {
-        Debug.Log("Clicked! Tutorial!");
         tutorialText1.enabled = true;
         tutorialText2.enabled = true;
         tutorialText3.enabled = true;
@@ -63,7 +61,6 @@ public class ButtonManager : MonoBehaviour
     }
     private void OnClickMenu()
     {
-        Debug.Log("Clicked Menu");
         tutorialText1.enabled = false;
         tutorialText2.enabled = false;
         tutorialText3.enabled = false;
