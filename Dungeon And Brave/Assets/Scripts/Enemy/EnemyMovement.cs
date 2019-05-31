@@ -20,6 +20,11 @@ public class EnemyMovement : MonoBehaviour
     Animator ac;
     bool isAC = false;
 
+    public AudioClip moveClip;
+    AudioSource enemyAudio;
+
+    float timerForClip = 0f;
+
 
     void Awake()
     {
@@ -31,6 +36,9 @@ public class EnemyMovement : MonoBehaviour
         startingPoint = GetComponent<Transform>().position;
         anim = GetComponent<Animation>();
         enemy = GetComponent<Transform>();
+
+        enemyAudio = GetComponent<AudioSource>();
+
         if (GetComponent<Animator>())
         {
             isAC = true;
@@ -81,6 +89,10 @@ public class EnemyMovement : MonoBehaviour
                         nav.enabled = true;
                         ableToAttack = false;
                         nav.SetDestination(startingPoint);
+
+                        ////play move sound
+                        PlayMoveClip();
+
                         if (isAC)
                         {
                             // this enemy have AC;
@@ -121,6 +133,10 @@ public class EnemyMovement : MonoBehaviour
                     nav.enabled = true;
                     ableToAttack = false;
                     nav.SetDestination(player.position);
+
+                    //play move sound
+                    PlayMoveClip();
+
                     if (isAC)
                     {
                         // this enemy have AC;
@@ -143,10 +159,14 @@ public class EnemyMovement : MonoBehaviour
                 // at the edge of it's habitat
                 if (Vector3.Distance(curPos, player.position) > rangeToSee)
                 {   //can't see player
-                    Debug.Log("goback");
+                    //Debug.Log("goback");
                     nav.enabled = true;
                     ableToAttack = false;
                     nav.SetDestination(startingPoint);
+
+                    ////play move sound
+                    PlayMoveClip();
+
                     if (isAC)
                     {
                         // this enemy have AC;
@@ -166,7 +186,7 @@ public class EnemyMovement : MonoBehaviour
                 {
 
 
-                    Debug.Log("attact");
+                    //Debug.Log("attact");
                     nav.enabled = false;
                     ableToAttack = true;
                     if (isAC)
@@ -185,7 +205,7 @@ public class EnemyMovement : MonoBehaviour
                 }
                 else
                 {
-                Debug.Log("Wait");
+                //Debug.Log("Wait");
                 //wait
                 nav.enabled = false;
                 ableToAttack = false;
@@ -230,6 +250,18 @@ public class EnemyMovement : MonoBehaviour
         //    }
     }
 
+    void PlayMoveClip()
+    {
+        //play move sound
+        timerForClip += Time.deltaTime;
+
+        if (timerForClip >= 0.5f)
+        {
+            enemyAudio.clip = moveClip;
+            enemyAudio.Play();
+            timerForClip = 0f;
+        }
+    }
 
 
     /*private void OnParticleCollision(GameObject other)

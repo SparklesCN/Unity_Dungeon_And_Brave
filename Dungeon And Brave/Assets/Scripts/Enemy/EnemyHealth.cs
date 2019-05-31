@@ -15,6 +15,10 @@ public class EnemyHealth : MonoBehaviour
     Animator ac;
     bool isAC = false;
 
+    public AudioClip deathClip;
+    AudioClip hurtClip;
+    AudioSource enemyAudio;
+
     void Awake()
     {
         // Setting up the references.
@@ -22,6 +26,9 @@ public class EnemyHealth : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
+        
+        enemyAudio = GetComponent<AudioSource>();
+        hurtClip = enemyAudio.clip;
 
         if (GetComponent<Animator>())
         {
@@ -55,6 +62,11 @@ public class EnemyHealth : MonoBehaviour
 
         // Reduce the current health by the amount of damage sustained.
         currentHealth -= amount;
+
+        //play hurt audio
+        enemyAudio.clip = hurtClip;
+        enemyAudio.Play();
+
         // If the current health is less than or equal to zero...
         if (currentHealth <= 0)
         {
@@ -72,6 +84,10 @@ public class EnemyHealth : MonoBehaviour
 
         // Turn the collider into a trigger so shots can pass through it.
         capsuleCollider.isTrigger = true;
+
+        //play audio
+        enemyAudio.clip = deathClip;
+        enemyAudio.Play();
 
         // Tell the animator that the enemy is dead.
         if (isAC)

@@ -19,6 +19,7 @@ public class EnemyAttack : MonoBehaviour
     Animator ac;
     bool isAC = false;
 
+
     void Awake()
     {
         // Setting up the references.

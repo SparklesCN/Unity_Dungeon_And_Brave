@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Ability_2 : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class Player_Ability_2 : MonoBehaviour
     public int healAmount = 40;
     PlayerHealth playerHealth;
     Animator anim;
+    Image abilityCover;
+
+    AudioSource playerAudio;
+    public AudioClip ability2_Clip;
 
     // Start is called before the first frame update
     void Awake()
@@ -26,6 +31,9 @@ public class Player_Ability_2 : MonoBehaviour
         particlePart3.Stop();
         playerHealth = this.GetComponent<PlayerHealth>();
         anim = GetComponent<Animator>();
+        playerAudio = GetComponent<AudioSource>();
+        myTime = 5f;
+        abilityCover = GameObject.Find("Ability_2/Cover").GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -33,6 +41,14 @@ public class Player_Ability_2 : MonoBehaviour
     void Update()
     {
         Ability();
+        if (myTime > abilityGap)
+        {
+            abilityCover.enabled = false;
+        }
+        else
+        {
+            abilityCover.enabled = true;
+        }
     }
     void Ability()
     {
@@ -48,6 +64,10 @@ public class Player_Ability_2 : MonoBehaviour
                 particlePart1.Play();
                 particlePart2.Play();
                 particlePart3.Play();
+
+                //play sound
+                playerAudio.clip = ability2_Clip;
+                playerAudio.Play();
 
                 if (playerHealth.currentHealth >= 70)
                 {

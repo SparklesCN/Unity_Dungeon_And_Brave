@@ -23,10 +23,15 @@ public class PlayerAttack : MonoBehaviour
     IList<int> expList = new List<int> {280, 2700, 4500, 6600, 9000, 11700, 14000, 16500, 19200};
     PlayerHealth playerHealth;
 
+    public AudioClip attackClip;
+    public AudioClip levelupClip;
+    AudioSource playerAudio;
+
     private void Awake()
     {
         levelUpParticle = GameObject.Find("LevelUp").GetComponent<ParticleSystem>();
         levelUpParticle.Stop();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -63,6 +68,12 @@ public class PlayerAttack : MonoBehaviour
         {
             //Instantiate(Object original, Vector3 position, Quaternion rotation)
             GameObject copy_attact = Instantiate(attact, spellPos.position, spellPos.rotation) as GameObject;
+
+            //play attact audio
+            playerAudio.clip = attackClip;
+            playerAudio.Play();
+
+            //reset timer
             myTime = 0f;
         }
         anim.SetBool("isAttack", isFire);
@@ -88,6 +99,10 @@ public class PlayerAttack : MonoBehaviour
 
         levelUpParticle.Play();
         UnlockSpell();
+
+        //play sound for levelup
+        playerAudio.clip = levelupClip;
+        playerAudio.Play();
 
     }
 

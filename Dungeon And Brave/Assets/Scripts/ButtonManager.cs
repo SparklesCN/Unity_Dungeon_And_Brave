@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-
+    Canvas loadingCanvas;
+    Slider loadingSlider;
+    int currentProgress, targetProgress;
     Text tutorialText1, tutorialText2, tutorialText3, menuButtonText;
     Image tutorialBackground, menuButtonImage;
     Button menuButton;
@@ -29,6 +31,11 @@ public class ButtonManager : MonoBehaviour
         menuButtonImage = GameObject.Find("MenuButton").GetComponent<Image>();
         menuButtonText = GameObject.Find("MenuButtonText").GetComponent<Text>();
 
+        currentProgress = 0;
+        targetProgress = 0;
+        loadingSlider = GameObject.Find("LoadingSlider").GetComponent<Slider>();
+        loadingCanvas = GameObject.Find("LoadingCanvas").GetComponent<Canvas>();
+
     }
 
     private void OnClickExit()
@@ -39,7 +46,8 @@ public class ButtonManager : MonoBehaviour
     private void OnClickStart()
     {
         Debug.Log("Clicked! Start!");
-        SceneManager.LoadSceneAsync("map");
+        loadingCanvas.enabled = true;
+        StartCoroutine(LoadingScene());
     }
     private void OnClickTutorial()
     {
@@ -64,5 +72,29 @@ public class ButtonManager : MonoBehaviour
         menuButton.enabled = false;
         menuButtonImage.enabled = false;
         menuButtonText.enabled = false;
+    }
+
+    private IEnumerator LoadingScene()
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(1); //load next map
+        asyncOperation.allowSceneActivation = false;                          //Ban auto load after loading
+        while (asyncOperation.progress < 0.9f)                                //when progress less than 0.9f
+        {
+            targetProgress = (int)(asyncOperation.progress * 100); //when progress in allowSceneActivation= false，will stuck on 0.89999，time 100 to get int
+            yield return LoadProgress();
+        }
+        targetProgress = 100;
+        yield return LoadProgress();
+        asyncOperation.allowSceneActivation = true;
+    }
+
+    private IEnumerator<WaitForEndOfFrame> LoadProgress()
+    {
+        while (currentProgress < targetProgress)
+        {
+            ++currentProgress;
+            loadingSlider.value = (float)currentProgress / 100;
+            yield return new WaitForEndOfFrame();
+        }
     }
 }

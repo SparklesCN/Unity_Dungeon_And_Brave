@@ -14,6 +14,10 @@ public class PlayerHealth : MonoBehaviour
     PlayerMovement playerMovement;                              // Reference to the player's movement.
     bool isDead;                                                // Whether the player is dead.
 
+    public AudioClip deathClip;
+    AudioClip hurtClip;
+    AudioSource playerAudio;
+     
 
     void Awake()
     {
@@ -25,6 +29,9 @@ public class PlayerHealth : MonoBehaviour
         // Set the initial health of the player.
         currentHealth = PlayerPrefs.GetInt("HP");
         healthSlider.value = currentHealth;
+        playerAudio = GetComponent<AudioSource>();
+        hurtClip = playerAudio.clip;
+        
     }
 
     void Update()
@@ -46,6 +53,9 @@ public class PlayerHealth : MonoBehaviour
         // Set the health bar's value to the current health.
         healthSlider.value = currentHealth;
 
+        //play hurt audio
+        playerAudio.clip = hurtClip;
+        playerAudio.Play();
 
         // If the player has lost all it's health and the death flag hasn't been set yet...
         if (currentHealth <= 0 && !isDead)
@@ -67,6 +77,10 @@ public class PlayerHealth : MonoBehaviour
 
         // Turn off the movement and shooting scripts.
         playerMovement.enabled = false;
+
+        //play death audio
+        playerAudio.clip = deathClip;
+        playerAudio.Play();
     }
 
 }
