@@ -14,7 +14,7 @@ public class Player_Ability_1 : MonoBehaviour
     public float abilityGap = 1f;
     Animator anim;
     AudioSource playerAudio;
-    public AudioClip ability1_Clip;
+    //public AudioClip ability1_Clip;
     bool isFire;
 
     private void Start()
@@ -50,11 +50,12 @@ public class Player_Ability_1 : MonoBehaviour
             {
                 GameObject copy_attact = Instantiate(ability, spellPos.position, spellPos.rotation) as GameObject;
 
-                //play ability1 sound
-                playerAudio.clip = ability1_Clip;
-                playerAudio.Play();
+                //play audio on object ability1 itself, it will play when object ability1 creat and only play for once
+                ////play ability1 sound
+                //playerAudio.clip = ability1_Clip;
+                //playerAudio.Play();
             }
-            
+
         }
         anim.SetBool("isAbility", isFire);
     }

@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
     int floor;
     //float camRayL = 100f;
+    AudioSource playerAudio;
+    public AudioClip moveClip;
+
+    float timerForClip = 0f;
 
 
 
@@ -24,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
         floor = LayerMask.GetMask("Floor");
         anim = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
+        playerAudio = GetComponent<AudioSource>();
+        //timerForClip = 0f;
+
     }
 
     // FixedUpdate is called once per every physic update
@@ -31,26 +38,40 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
-       
+
+
+        timerForClip += Time.deltaTime;
         if (Input.GetKey(KeyCode.W))
         {
             playerRigidbody.position += transform.forward * Time.deltaTime * movementSpeed;
             anim.SetBool("isRun", true);
+
+            //play sond of movement
+            PlayMoveClip();
         }
         else if (Input.GetKey(KeyCode.S))
         {
             playerRigidbody.position -= transform.forward * Time.deltaTime * movementSpeed;
             anim.SetBool("isRun", true);
+
+            //play sond of movement
+            PlayMoveClip();
         }
         else if (Input.GetKey(KeyCode.A))
         {
             playerRigidbody.position -= transform.right * Time.deltaTime * movementSpeed;
             anim.SetBool("isRun", true);
+
+            //play sond of movement
+            PlayMoveClip();
         }
         else if (Input.GetKey(KeyCode.D))
         {
             playerRigidbody.position += transform.right * Time.deltaTime * movementSpeed;
             anim.SetBool("isRun", true);
+
+            //play sond of movement
+            PlayMoveClip();
         }
         else 
         {
@@ -117,5 +138,18 @@ public class PlayerMovement : MonoBehaviour
 
         anim.SetBool("isRun", runing);
     }
+
+    void PlayMoveClip()
+    {
+        //play move sound
+
+        if (timerForClip >= 0.3f)
+        {
+            playerAudio.clip = moveClip;
+            playerAudio.Play();
+            timerForClip = 0f;
+        }
+    }
+
 
 }

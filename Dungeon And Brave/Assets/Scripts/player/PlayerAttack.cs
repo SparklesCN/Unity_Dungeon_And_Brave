@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
     IList<int> expList = new List<int> {280, 2700, 4500, 6600, 9000, 11700, 14000, 16500, 19200};
     PlayerHealth playerHealth;
 
-    public AudioClip attackClip;
+    //public AudioClip attackClip;
     public AudioClip levelupClip;
     AudioSource playerAudio;
 
@@ -69,9 +69,10 @@ public class PlayerAttack : MonoBehaviour
             //Instantiate(Object original, Vector3 position, Quaternion rotation)
             GameObject copy_attact = Instantiate(attact, spellPos.position, spellPos.rotation) as GameObject;
 
-            //play attact audio
-            playerAudio.clip = attackClip;
-            playerAudio.Play();
+            //move audio to object fireBall(attact) itself, it will play when object fireball creat and only play for once
+            ////play attact audio
+            //playerAudio.clip = attackClip;
+            //playerAudio.Play();
 
             //reset timer
             myTime = 0f;
