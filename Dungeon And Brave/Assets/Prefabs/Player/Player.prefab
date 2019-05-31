@@ -260,12 +260,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attact: {fileID: 1671790395368204686, guid: 3d5d2de60a39648edaa732bda1ec2e16, type: 3}
   spellPos: {fileID: 3009933604803901634}
-  attackGap: 1.5
+  attackGap: 2
   level: 1
   curEXP: 1
   constantOFlevel: 1
-  attackClip: {fileID: 8300000, guid: 39a164493232a7943966bc974c15a508, type: 3}
-  levelupClip: {fileID: 8300000, guid: dffcd80d1513de24982d135ab3f1a1c9, type: 3}
+  attackClip: {fileID: 8300000, guid: edfd75285dbc643fe9e3f94e0e8a4d63, type: 3}
+  levelupClip: {fileID: 8300000, guid: beedcda4da5ef41e391bee21287c43f1, type: 3}
 --- !u!114 &3009933606373876863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   spellPos: {fileID: 3009933604803901634}
   magicCost: 10
   key: 1
-  abilityGap: 2
+  abilityGap: 5
   ability1_Clip: {fileID: 8300000, guid: 195437fead4ce4c30a246e4062e558c7, type: 3}
 --- !u!114 &4436680534717353653
 MonoBehaviour:

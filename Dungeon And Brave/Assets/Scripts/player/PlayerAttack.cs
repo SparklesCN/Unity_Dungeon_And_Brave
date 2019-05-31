@@ -96,6 +96,7 @@ public class PlayerAttack : MonoBehaviour
         level++;
         constantOFlevel = (int)(constantOFlevel * 1.2f);
         target = expList[level - 1];
+        // playerHealth.currentHealth = 100;
 
         levelUpParticle.Play();
         UnlockSpell();

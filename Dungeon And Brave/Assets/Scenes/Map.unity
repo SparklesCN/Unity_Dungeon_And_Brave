@@ -23500,15 +23500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 173225067, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: attackDamage
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 173225072, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
-      propertyPath: habitat
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 173225072, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
-      propertyPath: stopDistanceWithPlay
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 173225071, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: enemyEXP
@@ -47712,15 +47704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 173225067, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: attackDamage
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 173225072, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
-      propertyPath: habitat
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 173225072, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
-      propertyPath: stopDistanceWithPlay
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 173225071, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: enemyEXP
@@ -52355,15 +52339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 173225067, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: attackDamage
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 173225072, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
-      propertyPath: habitat
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 173225072, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
-      propertyPath: stopDistanceWithPlay
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 173225071, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: enemyEXP

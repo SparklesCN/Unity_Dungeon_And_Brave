@@ -32882,7 +32882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53fbffe0cc874993880c938e8b399c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 10
+  damageAmount: 30
 --- !u!199 &19900012
 ParticleSystemRenderer:
   serializedVersion: 6

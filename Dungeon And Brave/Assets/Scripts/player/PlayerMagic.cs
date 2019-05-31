@@ -39,7 +39,7 @@ public class PlayerMagic : MonoBehaviour
     {
         if (currentMagic <= 90)
         {
-            currentMagic += 10;
+            currentMagic += 5;
         }
     }
     public bool TakeMagic(int amount)
