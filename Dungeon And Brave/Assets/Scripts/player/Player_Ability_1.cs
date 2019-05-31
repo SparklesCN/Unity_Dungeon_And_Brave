@@ -11,10 +11,13 @@ public class Player_Ability_1 : MonoBehaviour
     float myTime = 0f;
     public float abilityGap = 1f;
     Animator anim;
+    AudioSource playerAudio;
+    public AudioClip ability1_Clip;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,10 @@ public class Player_Ability_1 : MonoBehaviour
             if (GetComponent<PlayerMagic>().TakeMagic(magicCost))
             {
                 GameObject copy_attact = Instantiate(ability, spellPos.position, spellPos.rotation) as GameObject;
+
+                //play ability1 sound
+                playerAudio.clip = ability1_Clip;
+                playerAudio.Play();
             }
             
         }

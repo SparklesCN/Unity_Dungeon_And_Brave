@@ -13,6 +13,9 @@ public class Player_Ability_2 : MonoBehaviour
     PlayerHealth playerHealth;
     Animator anim;
 
+    AudioSource playerAudio;
+    public AudioClip ability2_Clip;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,6 +29,7 @@ public class Player_Ability_2 : MonoBehaviour
         particlePart3.Stop();
         playerHealth = this.GetComponent<PlayerHealth>();
         anim = GetComponent<Animator>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,6 +52,10 @@ public class Player_Ability_2 : MonoBehaviour
                 particlePart1.Play();
                 particlePart2.Play();
                 particlePart3.Play();
+
+                //play sound
+                playerAudio.clip = ability2_Clip;
+                playerAudio.Play();
 
                 if (playerHealth.currentHealth >= 70)
                 {
