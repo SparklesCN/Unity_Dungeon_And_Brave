@@ -12,5 +12,3 @@
 ## Course Page:
 > https://classes.cs.uoregon.edu/19S/cis410gameprog/index.htm
 
-
-# Build The Scene Named "Map" !
