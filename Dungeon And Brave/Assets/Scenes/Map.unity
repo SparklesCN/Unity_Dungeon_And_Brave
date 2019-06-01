@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23500,7 +23500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 173225067, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 173225071, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: enemyEXP
@@ -47661,7 +47661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 173225067, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 173225071, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: enemyEXP
@@ -52064,6 +52064,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 173225067, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
+      propertyPath: attackDamage
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
 --- !u!1001 &1302246326
@@ -52296,7 +52300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 173225067, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 173225071, guid: 5421da1cc83cd4bcdade6cf928efe2ef, type: 3}
       propertyPath: enemyEXP
@@ -61780,6 +61784,11 @@ PrefabInstance:
       propertyPath: moveClip
       value: 
       objectReference: {fileID: 8300000, guid: e56dd089dbfccf5468cc647e3a5aeb71, type: 3}
+    - target: {fileID: 5237788126615929214, guid: 7c044c0eb81a94d94b4e3cb4dade8c33,
+        type: 3}
+      propertyPath: attackDamage
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c044c0eb81a94d94b4e3cb4dade8c33, type: 3}
 --- !u!1001 &1539118362
