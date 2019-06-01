@@ -871,14 +871,14 @@ GameObject:
   m_Component:
   - component: {fileID: 948374407052474745}
   - component: {fileID: 948374407061453473}
-  - component: {fileID: 948374407058264531}
+  - component: {fileID: 4352894204575758583}
   m_Layer: 0
   m_Name: Undead_Necro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &948374407052474745
 Transform:
   m_ObjectHideFlags: 0
@@ -914,23 +914,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &948374407058264531
-MonoBehaviour:
+--- !u!136 &4352894204575758583
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948374407052238157}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c020728dc90752543ab3ef8fd6d22697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 125044, guid: ae6cf3671590f3741928b2570d0f0dba, type: 3}
-  shootPoint: {fileID: 948374407052431223}
-  attackLenght: 0.1
-  attackRange: 2
-  hitEffect: {fileID: 122066, guid: 45cc5d5413d45af4cb186c42b21d2d36, type: 3}
+  m_Radius: 0.82338965
+  m_Height: 2.6355126
+  m_Direction: 1
+  m_Center: {x: -0.10947287, y: 0.8177563, z: 0.13781738}
 --- !u!1 &948374407052240165
 GameObject:
   m_ObjectHideFlags: 0

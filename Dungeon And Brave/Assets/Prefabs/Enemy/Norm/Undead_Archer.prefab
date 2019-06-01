@@ -290,14 +290,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8602095650422373611}
   - component: {fileID: 8602095650429827775}
-  - component: {fileID: 8602095650432280733}
+  - component: {fileID: 6033029147515235504}
   m_Layer: 0
   m_Name: Undead_Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8602095650422373611
 Transform:
   m_ObjectHideFlags: 0
@@ -333,23 +333,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8602095650432280733
-MonoBehaviour:
+--- !u!136 &6033029147515235504
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8602095650422524575}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c020728dc90752543ab3ef8fd6d22697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 168384, guid: 489a8e06c43df554b98b9754aab2f42b, type: 3}
-  shootPoint: {fileID: 8602095650422273871}
-  attackLenght: 1
-  attackRange: 25
-  hitEffect: {fileID: 0}
+  m_Radius: 0.72270495
+  m_Height: 2.5380144
+  m_Direction: 1
+  m_Center: {x: 0.17365903, y: 0.7690072, z: 0}
 --- !u!1 &8602095650422532489
 GameObject:
   m_ObjectHideFlags: 0

@@ -778,14 +778,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8417685377549245419}
   - component: {fileID: 8417685377540158307}
-  - component: {fileID: 8417685377543476381}
   m_Layer: 0
   m_Name: human_cleric_Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8417685377549245419
 Transform:
   m_ObjectHideFlags: 0
@@ -823,23 +822,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8417685377543476381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8417685377549581915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c020728dc90752543ab3ef8fd6d22697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 125044, guid: ae6cf3671590f3741928b2570d0f0dba, type: 3}
-  shootPoint: {fileID: 8417685377549290827}
-  attackLenght: 0.7
-  attackRange: 15
-  hitEffect: {fileID: 106216, guid: 0944f4b9f4efb0542888c8a41b5983ae, type: 3}
 --- !u!1 &8417685377549586557
 GameObject:
   m_ObjectHideFlags: 0

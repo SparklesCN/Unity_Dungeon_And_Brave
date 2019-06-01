@@ -663,13 +663,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4815697967619364766}
   - component: {fileID: 4815697967611791450}
+  - component: {fileID: 7681197685426825988}
   m_Layer: 0
   m_Name: Undead_Master_RIG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4815697967619364766
 Transform:
   m_ObjectHideFlags: 0
@@ -705,6 +706,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &7681197685426825988
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815697967619045578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7705037
+  m_Height: 2.8134131
+  m_Direction: 1
+  m_Center: {x: 0.019627273, y: 0.9067066, z: 0}
 --- !u!1 &4815697967619092542
 GameObject:
   m_ObjectHideFlags: 0
