@@ -57,8 +57,8 @@ public class EnemyMovement : MonoBehaviour
 
         if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         {
-            //inside his habitat
-            if (Vector3.Distance(startingPoint, curPos) < habitat)
+            //player inside his habitat
+            if (Vector3.Distance(startingPoint, player.position) < habitat)
             {
                 if (Vector3.Distance(curPos, player.position) > rangeToSee)
                 {   //can't see player
@@ -68,7 +68,7 @@ public class EnemyMovement : MonoBehaviour
                         nav.enabled = false;
                         ableToAttack = false;
                         //change rotation to 0, 180, 0
-                        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 180, 0), Time.deltaTime*2);
+                        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 180, 0), Time.deltaTime * 2);
 
                         if (isAC)
                         {
@@ -77,7 +77,7 @@ public class EnemyMovement : MonoBehaviour
                             ac.SetBool("isRun", false);
 
                         }
-                        else 
+                        else
                         {
                             // this enemy only Animation
                             // plz switch between Anims
@@ -155,11 +155,31 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
-                //Debug.Log(Vector3.Distance(curPos, player.position));
-                // at the edge of it's habitat
-                if (Vector3.Distance(curPos, player.position) > rangeToSee)
-                {   //can't see player
-                    //Debug.Log("goback");
+                //player is outside enemy habity
+                if (Vector3.Distance(startingPoint, curPos) < 1)
+                {
+                    // arrive string point
+                    nav.enabled = false;
+                    ableToAttack = false;
+                    //change rotation to 0, 180, 0
+                    transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 180, 0), Time.deltaTime * 2);
+
+                    if (isAC)
+                    {
+                        // this enemy have AC;
+                        // plz set bool and triger
+                        ac.SetBool("isRun", false);
+
+                    }
+                    else
+                    {
+                        // this enemy only Animation
+                        // plz switch between Anims
+                        anim.Play(idleAnimName, PlayMode.StopAll);
+                    }
+                }
+                else
+                {
                     nav.enabled = true;
                     ableToAttack = false;
                     nav.SetDestination(startingPoint);
@@ -171,6 +191,7 @@ public class EnemyMovement : MonoBehaviour
                     {
                         // this enemy have AC;
                         // plz set bool and triger
+
                         ac.SetBool("isRun", true);
                         ac.SetBool("isAttack", false);
 
@@ -182,50 +203,6 @@ public class EnemyMovement : MonoBehaviour
                         anim.Play(walkAnimName, PlayMode.StopAll);
                     }
                 }
-                else if (Vector3.Distance(curPos, player.position) < stopDistanceWithPlay)
-                {
-
-
-                    //Debug.Log("attact");
-                    nav.enabled = false;
-                    ableToAttack = true;
-                    if (isAC)
-                    {
-                        // this enemy have AC;
-                        // plz set bool and triger
-                        ac.SetBool("isAttack", true);
-
-                    }
-                    else
-                    {
-                        // this enemy only Animation
-                        // plz switch between Anims
-                        anim.Play(attackAnimName, PlayMode.StopAll);
-                    }
-                }
-                else
-                {
-                //Debug.Log("Wait");
-                //wait
-                nav.enabled = false;
-                ableToAttack = false;
-
-                if (isAC)
-                {
-                    // this enemy have AC;
-                    // plz set bool and triger
-                    ac.SetBool("isRun", false);
-                    ac.SetBool("isAttack", false);
-                }
-                else
-                {
-                    // this enemy only Animation
-                    // plz switch between Anims
-                    anim.Play(idleAnimName, PlayMode.StopAll);
-                }
-                }
-             
-
             }
         }
         else
@@ -233,22 +210,24 @@ public class EnemyMovement : MonoBehaviour
             nav.enabled = false;
             ableToAttack = false;
         }
-        //    if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && Vector3.Distance(GetComponent<Transform>().position, player.position) > stopDistanceWithPlay)
-        //    {
-
-        //        nav.enabled = true;
-        //        isNaving = true;
-        //        // ... set the destination of the nav mesh agent to the player.
-        //        nav.SetDestination(player.position);
-        //    }
-        //    // Otherwise...
-        //    else
-        //    {
-        //        // ... disable the nav mesh agent.
-        //        nav.enabled = false;
-        //        isNaving = false;
-        //    }
     }
+         
+                //if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && Vector3.Distance(GetComponent<Transform>().position, player.position) > stopDistanceWithPlay)
+                //{
+
+                //    nav.enabled = true;
+                //    isNaving = true;
+                //    // ... set the destination of the nav mesh agent to the player.
+                //    nav.SetDestination(player.position);
+                //}
+                //// Otherwise...
+                //else
+                //{
+                //    // ... disable the nav mesh agent.
+                //    nav.enabled = false;
+                //    isNaving = false;
+                //}
+  
 
     void PlayMoveClip()
     {
