@@ -4932,7 +4932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 0
-  lifetime: 2
+  lifetime: 3
 --- !u!82 &4084301356624948767
 AudioSource:
   m_ObjectHideFlags: 0

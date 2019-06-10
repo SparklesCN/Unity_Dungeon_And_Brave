@@ -559,6 +559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.9
   attackDamage: 10
+  attackAnimName: Attack
 --- !u!114 &173225071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,6 +577,7 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   enemyEXP: 70
+  deathAnimName: Death
   deathClip: {fileID: 8300000, guid: e622085eb4f30487da2bedaf7ac98de6, type: 3}
 --- !u!114 &173225072
 MonoBehaviour:
@@ -590,10 +592,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistanceWithPlay: 3
-  rangeToSee: 6
+  rangeToSee: 15
   ableToAttack: 0
   isNaving: 1
-  habitat: 10
+  habitat: 18
+  attackAnimName: Attack
+  walkAnimName: walk
+  idleAnimName: Idle
   moveClip: {fileID: 8300000, guid: 49d6f40a251c84982b4bcdbb83a2eef5, type: 3}
 --- !u!195 &173225073
 NavMeshAgent:
@@ -645,7 +650,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 710d40377a19948e1becd0d2ae5a6666, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.7
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
