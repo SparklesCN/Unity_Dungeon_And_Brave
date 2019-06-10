@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
     Canvas loadingCanvas;
     Slider loadingSlider;
     int currentProgress, targetProgress;
+    DataControlor dataControlor;
 
     void Awake()
     {
@@ -39,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
         targetProgress = 0;
         loadingSlider = GameObject.Find("LoadingSlider").GetComponent<Slider>();
         loadingCanvas = GameObject.Find("LoadingCanvas").GetComponent<Canvas>();
+        dataControlor = GameObject.Find("DataControl").GetComponent<DataControlor>();
 
 
     }
@@ -97,7 +99,7 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator LoadingScene()
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("SceneNum")); //load next map
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(dataControlor.formerScene + 1); //load next map
         asyncOperation.allowSceneActivation = false;                          //Ban auto load after loading
         while (asyncOperation.progress < 0.9f)                                //when progress less than 0.9f
         {

@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
     public bool ableToAttack;
     public bool isNaving;
     public int habitat = 20;
-
+    public string attackAnimName = "Attack", walkAnimName = "walk", idleAnimName = "Idle";
     Vector3 startingPoint;          
     //public GameObject test;
     Animation anim;
@@ -81,7 +81,7 @@ public class EnemyMovement : MonoBehaviour
                         {
                             // this enemy only Animation
                             // plz switch between Anims
-                            anim.Play("Idle");
+                            anim.Play(idleAnimName, PlayMode.StopAll);
                         }
                     }
                     else
@@ -106,7 +106,7 @@ public class EnemyMovement : MonoBehaviour
                         {
                             // this enemy only Animation
                             // plz switch between Anims
-                            anim.Play("walk");
+                            anim.Play(walkAnimName, PlayMode.StopAll);
                         }
                     }
                 }
@@ -125,7 +125,7 @@ public class EnemyMovement : MonoBehaviour
                     {
                         // this enemy only Animation
                         // plz switch between Anims
-                        anim.Play("Attack");
+                        anim.Play(attackAnimName, PlayMode.StopAll);
                     }
                 }
                 else
@@ -149,7 +149,7 @@ public class EnemyMovement : MonoBehaviour
                     {
                         // this enemy only Animation
                         // plz switch between Anims
-                        anim.Play("walk");
+                        anim.Play(walkAnimName, PlayMode.StopAll);
                     }
                 }
             }
@@ -179,7 +179,7 @@ public class EnemyMovement : MonoBehaviour
                     {
                         // this enemy only Animation
                         // plz switch between Anims
-                        anim.Play("walk");
+                        anim.Play(walkAnimName, PlayMode.StopAll);
                     }
                 }
                 else if (Vector3.Distance(curPos, player.position) < stopDistanceWithPlay)
@@ -200,7 +200,7 @@ public class EnemyMovement : MonoBehaviour
                     {
                         // this enemy only Animation
                         // plz switch between Anims
-                        anim.Play("Attack");
+                        anim.Play(attackAnimName, PlayMode.StopAll);
                     }
                 }
                 else
@@ -221,7 +221,7 @@ public class EnemyMovement : MonoBehaviour
                 {
                     // this enemy only Animation
                     // plz switch between Anims
-                    anim.Play("Idle");
+                    anim.Play(idleAnimName, PlayMode.StopAll);
                 }
                 }
              

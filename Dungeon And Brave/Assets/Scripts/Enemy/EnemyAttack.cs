@@ -6,7 +6,7 @@ public class EnemyAttack : MonoBehaviour
 {
     public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
     public int attackDamage = 10;               // The amount of health taken away per attack.
-    
+    public string attackAnimName = "Attack";
 
     //Animator anim;                              // Reference to the animator component.
     GameObject player;                          // Reference to the player GameObject.
@@ -74,7 +74,7 @@ public class EnemyAttack : MonoBehaviour
         {
             // this enemy only Animation
             // plz switch between Anims
-            anim.Play("Attack");
+            anim.Play(attackAnimName);
         }
 
         // If the player has health to lose...
