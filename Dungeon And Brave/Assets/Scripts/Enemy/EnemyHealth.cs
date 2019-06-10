@@ -14,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
     bool isSinking;                             // Whether the enemy has started sinking through the floor.
     Animator ac;
     bool isAC = false;
+    public string deathAnimName = "Death";
 
     public AudioClip deathClip;
     AudioClip hurtClip;
@@ -101,7 +102,7 @@ public class EnemyHealth : MonoBehaviour
         {
             // this enemy only Animation
             // plz switch between Anims
-            anim.Play("Death");
+            anim.Play(deathAnimName);
         }
 
         //calling level up function to update player
