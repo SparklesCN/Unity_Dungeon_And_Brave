@@ -21,24 +21,24 @@ public class AbilityControlor : MonoBehaviour
             GameObject.FindWithTag("Player").GetComponent<Player_Ability_2>().enabled = true;
             GameObject.Find("Ability_2/lock").GetComponent<Image>().enabled = false;
         }
-        //if (level > 3)
-        //{
-        //    // unlock spell_3
-        //    GameObject.FindWithTag("Player").GetComponent<Ability_3>().enabled = true;
-        //    GameObject.Find("Ability_3/lock").GetComponent<Image>().enabled = false;
-        //}
-        //if (level > 4)
-        //{
-        //    // unlock spell_4
-        //    GameObject.FindWithTag("Player").GetComponent<Ability_4>().enabled = true;
-        //    GameObject.Find("Ability_4/lock").GetComponent<Image>().enabled = false;
-        //}
-        //if (level > 5)
-        //{
-        //    // unlock spell_5
-        //    GameObject.FindWithTag("Player").GetComponent<Ability_5>().enabled = true;
-        //    GameObject.Find("Ability_5/lock").GetComponent<Image>().enabled = false;
-        //}
+        if (level > 3)
+        {
+            // unlock spell_3
+            GameObject.FindWithTag("Player").GetComponent<Player_Ability_3>().enabled = true;
+            GameObject.Find("Ability_3/lock").GetComponent<Image>().enabled = false;
+        }
+        if (level > 4)
+        {
+            // unlock spell_4
+            GameObject.FindWithTag("Player").GetComponent<Player_Ability_4>().enabled = true;
+            GameObject.Find("Ability_4/lock").GetComponent<Image>().enabled = false;
+        }
+        if (level > 5)
+        {
+            // unlock spell_5
+            GameObject.FindWithTag("Player").GetComponent<Player_Ability_5>().enabled = true;
+            GameObject.Find("Ability_5/lock").GetComponent<Image>().enabled = false;
+        }
     }
 
 }

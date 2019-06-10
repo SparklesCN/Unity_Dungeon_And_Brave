@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922c14d9e95ad43e7b0effd4c4c9c59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 150
   currentHealth: 100
   sinkSpeed: 2.5
   scoreValue: 10
